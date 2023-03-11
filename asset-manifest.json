@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/erlow38.github.io/static/css/main.febed7ba.css",
+    "main.js": "/erlow38.github.io/static/js/main.4423a0e0.js",
+    "static/js/787.28cb0dcd.chunk.js": "/erlow38.github.io/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/erlow38.github.io/index.html",
+    "main.febed7ba.css.map": "/erlow38.github.io/static/css/main.febed7ba.css.map",
+    "main.4423a0e0.js.map": "/erlow38.github.io/static/js/main.4423a0e0.js.map",
+    "787.28cb0dcd.chunk.js.map": "/erlow38.github.io/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.febed7ba.css",
+    "static/js/main.4423a0e0.js"
+  ]
+}
