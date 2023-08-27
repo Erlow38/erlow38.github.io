@@ -1,0 +1,57 @@
+.TroisDimension {
+    height: 100vh;
+    width: 100%;
+    background: url("https://a-static.besthdwallpaper.com/the-earth-wallpaper-3840x2160-1673_54.jpg") no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+}
+.TroisDimension-container {
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.back {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1%;
+    left: 1%;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+.back:hover {
+    cursor: pointer;
+    transform: translateX(-10px);
+}
+.back p {
+    font-size: calc(5px + 2vmin);
+    color: #fff;
+}
+.back img {
+    margin: 10px;
+    width: 30px;
+}
+
+.me {
+    position: absolute;
+    z-index: 2;
+    bottom: 20px;
+    right: 20px;
+    width: 137px;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    background: #000;
+}

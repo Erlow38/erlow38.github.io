@@ -1,0 +1,187 @@
+.SmallBox {
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    width: calc(20px + 40vmin);
+    height: calc(20px + 30vmin);
+    margin: calc(1px + 2vmin);
+    transition: all 0.2s ease-in-out;
+    padding: calc(1px + 2vmin);
+    overflow: hidden;
+}
+
+.SmallBox:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    scale: 1.02;
+}
+
+.LargeBox {
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    width: calc(30px + 90vmin);
+    height: calc(20px + 30vmin);
+    margin: calc(1px + 2vmin);
+    transition: all 0.2s ease-in-out;
+    padding: calc(1px + 2vmin);
+    overflow: hidden;
+}
+
+.LargeBox:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    scale: 1.02;
+}
+
+.Project-title {
+    font-size: calc(8px + 2vmin);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 20px;
+}
+
+.Project-date {
+    font-size: calc(8px + 1vmin);
+    position: absolute;
+    left: 30px;
+    top: 0px;
+}
+
+.Project-description {
+    text-align: justify;
+    font-size: calc(8px + 1vmin);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 20px;
+    color: #ccc;
+}
+
+.Project-image {
+    width: 40%;
+    margin: 1%;
+    border-radius: 16px;
+}
+
+.Project-image-top {
+    width: 80%;
+    margin: 10px;
+    border-radius: 16px;
+}
+
+.Project-info {
+    position: absolute;
+    font-size: calc(8px + 1vmin);
+    padding: 10px 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    width: 70%;
+    border-radius: 20px
+}
+
+.Project-info button {
+    background-color: #a6a4a4;
+}
+
+.Project-pre {
+    font-size: calc(8px + 1vmin);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 20px
+}
+
+.Project-link {
+    font-size: calc(8px + 1vmin);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 20px;
+    color: #a6a4a4;
+    text-decoration: none;
+}
+
+.Project-link:hover {
+    text-decoration: underline;
+}
+
+.Project-langue-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.Project-langue-container p {
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: #777;
+    border-radius: 20px;
+    font-size: calc(8px + 1vmin);
+    color: #fff;
+}
+
+.Modal {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Modal-content {
+    background: rgba(49, 49, 49, 0.95);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    padding: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.Modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: calc(15px + 1vmin);
+    cursor: pointer;
+}
+
+.Modal-content::-webkit-scrollbar {
+    width: 12px;
+}
+.Modal-content::-webkit-scrollbar-track {
+    background: #ebebeb;
+}
+.Modal-content::-webkit-scrollbar-thumb {
+    background-color: #181818;
+    border-radius: 20px;
+    border: 3px solid #ebebeb;
+}
+
+@media screen and (max-width: 768px) {
+    .SmallBox {
+        width: calc(20px + 75vmin);
+        height: calc(20px + 70vmin);
+    }
+    .LargeBox {
+        width: calc(20px + 75vmin);
+        height: calc(20px + 70vmin);
+    }
+    .Project-image {
+        width: 80%;
+    }
+    .Project-pre {
+         text-align: left;
+     }
+}

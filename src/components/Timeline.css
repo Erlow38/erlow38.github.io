@@ -1,0 +1,72 @@
+.entry {
+    width: calc(50% - 80px);
+    float: left;
+    padding: 20px;
+    clear: both;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+.entry:not(:first-child) {
+    margin-top: -60px;
+}
+.Experience-title {
+    font-size: calc(8px + 2vmin);
+    margin-bottom: 12px;
+    position: relative;
+    color: #fff;
+}
+.Experience-title:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 4px solid #ffffff;
+    background-color: #1D1D1D;
+    border-radius: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -73px;
+}
+.Experience-image {
+    width: 40px;
+    height: 40px;
+    border: #ebebeb 2px solid;
+    background-color: #ebebeb;
+    margin: 1%;
+    border-radius: 100px;
+}
+.Experience-description {
+    text-align: justify;
+    font-size: calc(8px + 1vmin);
+    color: #ccc;
+}
+.Experience-date {
+    font-size: calc(8px + 1vmin);
+    position: absolute;
+    right: 30px;
+    top: 0px;
+}
+.entry:nth-child(2n) {
+    text-align: left;
+    float: right;
+}
+.entry:nth-child(2n) .Experience-title:before {
+    left: -63px;
+}
+
+@media screen and (max-width: 768px) {
+    .entry {
+        width: calc(100% - 80px);
+        margin-bottom: 100px;
+    }
+    .entry:nth-child(1n) {
+        text-align: left;
+        float: right;
+    }
+    .entry:nth-child(1n) .Experience-title:before {
+         left: -63px;
+     }
+}
