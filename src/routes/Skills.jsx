@@ -25,6 +25,7 @@ function Skills() {
                     <p>Java</p>
                     <p>C</p>
                     <p>C++</p>
+                    <p>Python</p>
                     <p>R</p>
                     <p>LaTeX</p>
                     <p>UML</p>
