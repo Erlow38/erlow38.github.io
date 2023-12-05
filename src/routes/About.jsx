@@ -1,7 +1,6 @@
 import './About.css';
 
 import Navbar from "../components/Navbar";
-import AnimatedButton from "../components/AnimatedButton";
 
 
 function About() {

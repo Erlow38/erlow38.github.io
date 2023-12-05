@@ -1,9 +1,7 @@
 import './IndexPage.css';
 
-import { useState } from 'react';
 import Navbar from "../components/Navbar";
 import AnimatedButton from "../components/AnimatedButton";
-import Stars from "../components/Stars";
 
 
 function IndexPage() {

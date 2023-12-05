@@ -53,6 +53,7 @@ function Skills() {
                     <p>Créatif</p>
                     <p>Ponctuel</p>
                     <p>Volonté d'apprendre</p>
+                    <p>Force de proposition</p>
                 </div>
             </div>
               <div className="Skills-card">
