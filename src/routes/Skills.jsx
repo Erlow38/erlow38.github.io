@@ -18,7 +18,10 @@ function Skills() {
                     <p>HTML</p>
                     <p>CSS</p>
                     <p>JavaScript</p>
+                    <p>TypeScript</p>
                     <p>React</p>
+                    <p>Angular</p>
+                    <p>Flutter</p>
                     <p>PHP</p>
                     <p>Symfony</p>
                     <p>SQL</p>
@@ -26,10 +29,7 @@ function Skills() {
                     <p>C</p>
                     <p>C++</p>
                     <p>Python</p>
-                    <p>R</p>
-                    <p>LaTeX</p>
                     <p>UML</p>
-                    <p>Assembleur</p>
                 </div>
             </div>
             <div className="Skills-card">
@@ -42,7 +42,6 @@ function Skills() {
                     <p>VSCode</p>
                     <p>IntelliJ</p>
                     <p>Android Studio</p>
-                    <p>R Studio</p>
                     <p>Visual Paradigm</p>
                 </div>
             </div>
