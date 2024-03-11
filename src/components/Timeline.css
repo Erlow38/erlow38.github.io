@@ -67,6 +67,6 @@
         float: right;
     }
     .entry:nth-child(1n) .Experience-title:before {
-         left: -63px;
+         left: calc(10% - 87.5px);
      }
 }
