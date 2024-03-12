@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function AnimatedButton(props) {
 
     return (
-        <Link to={props.dest}>
+        <Link target='_blank' to={props.dest}>
             <button className="btn">
                 <span className="btn-text">{props.text}</span>
                 <div className="fill-container"></div>

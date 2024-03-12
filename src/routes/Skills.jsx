@@ -30,6 +30,7 @@ function Skills() {
                     <p>C++</p>
                     <p>Python</p>
                     <p>UML</p>
+                    <p>Markdown</p>
                 </div>
             </div>
             <div className="Skills-card">

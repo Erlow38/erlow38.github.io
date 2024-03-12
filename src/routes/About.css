@@ -42,7 +42,7 @@
 .About-content-text p {
     text-align: justify;
     font-size: calc(8px + 1vmin);
-    padding: 20px;
+    padding: 10px;
 }
 
 .About-content-text a {
