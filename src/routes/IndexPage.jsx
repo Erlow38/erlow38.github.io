@@ -18,7 +18,7 @@ function IndexPage() {
                     <h1>Bonjour, je suis Ethan Ehrler</h1>
                     <h2>Développeur</h2>
                 </div>
-                <AnimatedButton text="Voir ErlOS" dest={'https://erlow38.github.io/erlos'}/>
+                <AnimatedButton target='_blank' text="Voir ErlOS" dest={'https://erlow38.github.io/erlos'}/>
             </div>
             <Navbar  />
 
