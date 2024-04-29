@@ -38,7 +38,7 @@
     width: calc(120px + 1vmin);
     margin: 0;
     padding: calc( 1vmin) calc(15px + 2vmin);
-    font-size: calc(2px + 2vmin);
+    font-size: calc(2px + 1.5vmin);
     color: #fff;
     text-decoration: none;
     background: transparent;
@@ -87,7 +87,11 @@
         align-items: center;
         padding: calc( 1vmin) calc(5px + 2vmin);
         height: 90%;
-        font-size: calc(1px + 2vmin);
     }
 }
 
+@media screen and (min-width: 2000px) {
+    .navitem {
+        font-size: calc(2px + 1.4vmin);
+    }
+}
