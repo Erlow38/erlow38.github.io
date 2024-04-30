@@ -58,3 +58,9 @@
         font-size: calc(2px + 2vmin);
     }
 }
+
+@media screen and (min-width: 2000px) {
+    .btn .btn-text {
+        font-size: calc(2px + 1.4vmin);
+    }
+}
