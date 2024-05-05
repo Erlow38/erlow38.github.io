@@ -97,10 +97,11 @@
     color: #ffffff;
     background: #0f0f11;
     padding: 0.5rem 1rem;
-    border-radius: 20px;
+    border-radius: calc(20px + 2vmin);
     cursor: pointer;
     border: 1.5px solid white;
     transition: all 0.3s;
+    font-size: calc(2px + 1.5vmin);
 }
 
 .About-button:hover {
