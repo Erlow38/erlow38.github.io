@@ -1,5 +1,6 @@
 .Skills {
     background: url("https://images5.alphacoders.com/501/501150.jpg"), no-repeat center;
+    background-attachment: fixed;
     background-size: cover;
     margin: 0;
     padding: 0;

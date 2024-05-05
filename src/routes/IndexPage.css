@@ -2,6 +2,7 @@
     text-align: center;
     background: url("https://a-static.besthdwallpaper.com/the-earth-wallpaper-3840x2160-1673_54.jpg") no-repeat top;
     background-size: cover;
+    background-attachment: fixed;
     min-height: 100vh;
     position: relative;
     display: flex;
