@@ -30,11 +30,11 @@
 }
 
 .Skills-card {
-    background: rgba(255, 255, 255, 0.14);
+    background: rgba(129, 122, 122, 0.14)!important;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
-    width: calc(20px + 80vmin);
+    width: 35%;
     margin: calc(1px + 2vmin);
     transition: all 0.2s ease-in-out;
     padding: calc(1px + 2vmin);
@@ -48,12 +48,20 @@
 }
 
 .Skills-card p {
+    display: flex;
+    align-items: center;
     margin: 10px;
     padding: 5px 10px;
     background-color: #777;
     border-radius: 20px;
     font-size: calc(8px + 1vmin);
     color: #fff;
+}
+
+.Skills-card p img, .Skills-card p svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 }
 
 .Skills-item {
@@ -66,9 +74,15 @@
     padding: 0;
 }
 
+.Skills-item div {
+    width: 100%;
+}
 
 @media screen and (max-width: 768px) {
     .Skills-card {
         width: 80%;
+    }
+    .Skills-container h3 {
+        font-size: 0.9rem;
     }
 }

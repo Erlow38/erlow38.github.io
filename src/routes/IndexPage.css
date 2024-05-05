@@ -1,16 +1,28 @@
 .IndexPage {
     text-align: center;
-    background: url("https://a-static.besthdwallpaper.com/the-earth-wallpaper-3840x2160-1673_54.jpg") no-repeat center;
+    background: url("https://a-static.besthdwallpaper.com/the-earth-wallpaper-3840x2160-1673_54.jpg") no-repeat top;
     background-size: cover;
     min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.IndexPage-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .IndexPage-container {
-    background: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    padding: 5rem 0;
 }
 .IndexPage-title {
     display: flex;
@@ -30,9 +42,108 @@
     padding: 0;
 }
 
+.IndexPage-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    color: #fff;
+    z-index: 1;
+}
+
+.Button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.Button-container a, .Button-container .Bar {
+    margin: 0 1rem;
+}
+
+.Bar {
+    width: 1px;
+    height: 20px;
+    background-color: #fff;
+}
+
+.About-content-text {
+    position: relative;
+    margin-top: 2rem;
+    height: 100px;
+    overflow: hidden;
+    background: rgba(129, 122, 122, 0.14)!important;
+    transition: ease-in-out 0.5s;
+}
+
+.About-content-text-full {
+    height: 100%;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.14)!important;
+}
+
+.About-content-text p {
+    margin: 0;
+}
+
+.About-button {
+    position: absolute;
+    bottom: 5px;
+    right: 50%;
+    transform: translateX(50%);
+    color: #ffffff;
+    background: #0f0f11;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1.5px solid white;
+    transition: all 0.3s;
+}
+
+.About-button:hover {
+    background-color: #ffffff;
+    color: black;
+    bottom: 10px;
+}
+
+.Contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    color: #fff;
+    z-index: 1;
+}
+
+.Contact-container svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 0.5rem;
+    transition: all 0.3s;
+}
+
+.Contact-container svg:hover {
+    color: #fff;
+    cursor: pointer;
+    scale: 1.1;
+}
 
 @media screen and (max-width: 768px) {
     .IndexPage-text {
         padding: 0 1rem;
+    }
+    .Bar {
+        display: none;
+    }
+    .Button-container {
+        flex-direction: column;
+    }
+    .Button-container a, .Button-container .Bar {
+        margin: 0.5rem 0;
+    }
+    .IndexPage-content {
+        width: 90%;
     }
 }

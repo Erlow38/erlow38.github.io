@@ -13,17 +13,20 @@ export default function Navbar() {
         setActivePath(path);
     }
 
+    /**
+    <li className="navbar-li">
+        <NavLink className="navbar-a" to={"/about"} activeClassName="active" onClick={() => handlePathChange('/about')}>
+            <p className="navitem">A propos</p>
+        </NavLink>
+    </li>
+    */
+
     return (
         <div className="navbar">
             <ul className="navbar-ul">
                 <li className="navbar-li">
                     <NavLink className="navbar-a" to={"/"}>
                         <p className="navitem" id="itemstart">Accueil</p>
-                    </NavLink>
-                </li>
-                <li className="navbar-li">
-                    <NavLink className="navbar-a" to={"/about"} activeClassName="active" onClick={() => handlePathChange('/about')}>
-                        <p className="navitem">A propos</p>
                     </NavLink>
                 </li>
                 <li className="navbar-li">
