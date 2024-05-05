@@ -39,7 +39,7 @@ function IndexPage() {
                     </div>
                 </div>
                 <div className='IndexPage-content'>
-                    <div className={aboutButtonClicked ? "About-content-text" : "About-content-text About-content-text-full"}>
+                    <div className={aboutButtonClicked ? "About-content-text" : "About-content-text About-content-text-full"} onClick={aboutButtonClickedFunc}>
                         <button className="About-button" onClick={aboutButtonClickedFunc}>{aboutButtonClicked ? "+" : "-"}</button>
                         <p>Mon nom est Ethan Ehrler et je poursuis mes études en troisième année de BUT Informatique de Grenoble. Passionné par le développement web et le design, j'apprécie travailler en équipe tout en étant autonome. Ma curiosité me pousse constamment à apprendre de nouvelles choses. 
                         </p>
