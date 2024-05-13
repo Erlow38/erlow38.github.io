@@ -23,7 +23,7 @@ function IndexPage() {
                 <div className='IndexPage-content'>
                     <div className="IndexPage-text">
                         <h1>Bonjour, je suis Ethan Ehrler</h1>
-                        <h2>Développeur</h2>
+                        <h2>Développeur Full Stack</h2>
                     </div>
                     <div className='Contact-container'>
                         <a title='06 16 52 07 25' target='_blank' href="tel: 06 16 52 07 25"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 15 16"><path fill="white" d="M10.38 1.52c-.44.05-.79.41-.85.85l-.77 3.27c-.11.46.12.94.55 1.14l.59.27C9.46 8.2 8.49 8.99 8.49 8.99s-.8.97-1.94 1.41l-.27-.59a1 1 0 0 0-1.14-.55l-3.27.77c-.44.06-.8.41-.85.85c-.1.82-.07 2.1.85 2.78c0 0 4.15 2.92 9.19-2.12s2.12-9.19 2.12-9.19c-.69-.92-1.97-.94-2.78-.85Z"/></svg></a>
@@ -32,8 +32,7 @@ function IndexPage() {
                         <a title='Erlow38' target='_blank' href="https://github.com/Erlow38"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="white" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59c.4.07.55-.17.55-.38c0-.19-.01-.82-.01-1.49c-2.01.37-2.53-.49-2.69-.94c-.09-.23-.48-.94-.82-1.13c-.28-.15-.68-.52-.01-.53c.63-.01 1.08.58 1.23.82c.72 1.21 1.87.87 2.33.66c.07-.52.28-.87.51-1.07c-1.78-.2-3.64-.89-3.64-3.95c0-.87.31-1.59.82-2.15c-.08-.2-.36-1.02.08-2.12c0 0 .67-.21 2.2.82c.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82c.44 1.1.16 1.92.08 2.12c.51.56.82 1.27.82 2.15c0 3.07-1.87 3.75-3.65 3.95c.29.25.54.73.54 1.48c0 1.07-.01 1.93-.01 2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg></a>
                     </div>
                     <div className='Button-container'>
-                        <AnimatedButton text="Voir mes projets" dest={'/projects'}/>
-                        <div className="Bar"></div>
+                        <h3 className='Main-project-title'>Mon projet phare : </h3>
                         <AnimatedButton target='_blank' text="Voir ErlOS" dest={'https://erlow38.github.io/erlos'}/>
                         <AnimatedButton target='_blank' text="Voir le code source ErlOS" dest={"https://github.com/Erlow38/erlos"}/>
                     </div>
