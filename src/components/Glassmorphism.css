@@ -169,7 +169,7 @@
     border: 3px solid #ebebeb;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1420px) {
     .SmallBox {
         width: calc(20px + 75vmin);
         height: calc(20px + 70vmin);

@@ -89,7 +89,7 @@
     }
 }
 
-@media screen and (min-aspect-ratio: 17/9) {
+@media screen and (min-aspect-ratio: 21/9) {
     .Skills-content {
         width: 70%;
     }
