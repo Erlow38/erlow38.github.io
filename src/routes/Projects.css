@@ -37,7 +37,7 @@
     margin-bottom: calc(50px + 2vmin);
 }
 
-@media screen and (min-aspect-ratio: 17/9) {
+@media screen and (min-aspect-ratio: 20/9) {
     .Glassmorphism-container {
         width: 70%;
     }
