@@ -185,3 +185,9 @@
          text-align: left;
      }
 }
+
+@media screen and (min-aspect-ratio: 17/9) {
+    .Modal-content {
+        width: 60%;
+    }
+}

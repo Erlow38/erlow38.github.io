@@ -12,6 +12,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     min-height: 100vh;
 }
 
@@ -85,5 +86,11 @@
     }
     .Skills-container h3 {
         font-size: 0.9rem;
+    }
+}
+
+@media screen and (min-aspect-ratio: 17/9) {
+    .Skills-content {
+        width: 70%;
     }
 }
