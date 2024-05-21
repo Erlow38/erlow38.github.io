@@ -82,6 +82,7 @@
 .About-content-text-full {
     height: 100%;
     margin-bottom: 1rem;
+    padding-bottom: 3rem!important;
     background: rgba(255, 255, 255, 0.14)!important;
 }
 
@@ -91,12 +92,13 @@
 
 .About-button {
     position: absolute;
-    bottom: 5px;
+    bottom: 0px;
+    margin-bottom: 10px;
     right: 50%;
     transform: translateX(50%);
     color: #ffffff;
-    background: #0f0f11;
-    padding: 0.5rem 1rem;
+    background-color: #090914ef;
+    padding: calc(1px + 1vmin) calc(10px + 1.2vmin);
     border-radius: calc(20px + 2vmin);
     cursor: pointer;
     border: 1.5px solid white;
@@ -107,7 +109,7 @@
 .About-button:hover {
     background-color: #ffffff;
     color: black;
-    bottom: 10px;
+    bottom: 5px;
 }
 
 .Contact-container {
@@ -156,5 +158,11 @@
     }
     .Main-project-title {
         margin: 1rem 0;
+    }
+    .About-button {
+        font-size: calc(2px + 2vmin);
+    }
+    .About-content-text-full {
+        padding-bottom: 1rem!important;
     }
 }
