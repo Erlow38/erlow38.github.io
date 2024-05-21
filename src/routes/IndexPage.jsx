@@ -39,7 +39,7 @@ function IndexPage() {
                 </div>
                 <div className='IndexPage-content'>
                     <div className={aboutButtonClicked ? "About-content-text" : "About-content-text About-content-text-full"} onClick={aboutButtonClickedFunc}>
-                        <button className="About-button" onClick={aboutButtonClickedFunc}>{aboutButtonClicked ? "+" : "-"}</button>
+                        <button className="About-button" onClick={aboutButtonClickedFunc}><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m7 10l5 5l5-5"/></svg></button>
                         <p>Mon nom est Ethan Ehrler et je poursuis mes études en troisième année de BUT Informatique à l'IUT 2 de Grenoble. Passionné par le développement web et le design, j'apprécie travailler en équipe tout en étant autonome. Ma curiosité me pousse constamment à apprendre de nouvelles choses. 
                         </p>
                         <p>Mon expérience professionnelle inclut un stage de développeur web au Laboratoire Informatique de Grenoble (LIG) en 2023, et une alternance en tant que développeur web chez Sercel Grenoble en 2023-2024. Tout au long de ces expériences, j'ai pu développer de nombreuses compétences en divers langages de programmation, en gestion de projet, en communication et en travail d'équipe à travers des projets variés.
