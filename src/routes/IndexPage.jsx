@@ -40,15 +40,11 @@ function IndexPage() {
                 <div className='IndexPage-content'>
                     <div className={aboutButtonClicked ? "About-content-text" : "About-content-text About-content-text-full"} onClick={aboutButtonClickedFunc}>
                         <button className="About-button" onClick={aboutButtonClickedFunc}><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m7 10l5 5l5-5"/></svg></button>
-                        <p>Mon nom est Ethan Ehrler et je poursuis mes études en troisième année de BUT Informatique à l'IUT 2 de Grenoble. Passionné par le développement web et le design, j'apprécie travailler en équipe tout en étant autonome. Ma curiosité me pousse constamment à apprendre de nouvelles choses. 
+                        <p>Diplômé du BUT Informatique à l'IUT 2 de Grenoble et passionné par le développement web ainsi que le design, ma curiosité me pousse constamment à apprendre de nouvelles choses.
                         </p>
-                        <p>Mon expérience professionnelle inclut un stage de développeur web au Laboratoire Informatique de Grenoble (LIG) en 2023, et une alternance en tant que développeur web chez Sercel Grenoble en 2023-2024. Tout au long de ces expériences, j'ai pu développer de nombreuses compétences en divers langages de programmation, en gestion de projet, en communication et en travail d'équipe à travers des projets variés.
+                        <p>J'ai acquis une certaine expérience professionnelle, notamment lors d'un stage de développeur web au Laboratoire Informatique de Grenoble (LIG) en 2023, et une alternance en tant que développeur web chez Sercel Grenoble en 2023-2024. Tout au long de ces expériences, j'ai pu développer de nombreuses compétences en divers langages de programmation, en gestion de projet, en communication et en travail d'équipe à travers des projets variés.
                         </p>
-                        <p>La musique m'intéresse particulièrement, tout comme l'automobile et les motos. Je possède les permis A1 (125cm3) et B (voiture). Par ailleurs, je suis également un amateur d'animés et de jeux vidéo tels que Rocket League, Minecraft, The Crew, Genshin et Fortnite.
-                        </p>
-                        <p>Mon passé inclut dix années de pratique du tennis de table, deux ans de karaté, et une passion pour le ski depuis mon plus jeune âge, ayant suivi des cours dans cette discipline. De plus, je suis membre d'une association dans mon village, active dans l'organisation d'une variété d'événements et de festivités.
-                        </p>
-                        <p>Vous pouvez me contacter par mail à <a href="mailto: ethan.ehrler@outlook.com">ethan.ehrler@outlook.com</a>, par téléphone au <a href="tel: 06 16 52 07 25">06 16 52 07 25</a> ou via <a target="_blank" href="http://www.linkedin.com/in/ethan-ehrler-b5855a251">LinkedIn</a>.</p>
+                        <p>Si mon profil vous intéresse, vous pouvez me contacter par mail à <a href="mailto: ethan.ehrler@outlook.com">ethan.ehrler@outlook.com</a>, par téléphone au <a href="tel: 06 16 52 07 25">06 16 52 07 25</a> ou via <a target="_blank" href="http://www.linkedin.com/in/ethan-ehrler-b5855a251">LinkedIn</a>.</p>
                         <br />
                     </div>
                 </div>
