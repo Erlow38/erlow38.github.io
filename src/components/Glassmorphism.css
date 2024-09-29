@@ -186,6 +186,12 @@
      }
 }
 
+@media screen and (max-width: calc(50px + 150vmin)) {
+    .SmallBox, .LargeBox {
+        width: calc(20px + 75vmin);
+    }
+}
+
 @media screen and (min-aspect-ratio: 17/9) {
     .Modal-content {
         width: 60%;

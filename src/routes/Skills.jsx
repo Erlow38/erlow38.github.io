@@ -46,6 +46,10 @@ function Skills() {
                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="#dd0031" d="M16 2L2.966 6.648l1.988 17.234L16 30l11.046-6.118l1.988-17.234z"/><path fill="#c3002f" d="M16 2v3.108v-.014V30l11.046-6.118l1.988-17.234z"/><path fill="#fff" d="m16 5.094l-8.148 18.27h3.038l1.638-4.088h6.916l1.638 4.088h3.038zm2.38 11.662h-4.76L16 11.03Z"/></svg>
                         Angular
                       </p>
+                      
+                      <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"><polygon fill="#81c784" points="23.987,17 18.734,8 2.974,8 23.987,44 45,8 29.24,8"></polygon><polygon fill="#455a64" points="29.24,8 23.987,17 18.734,8 11.146,8 23.987,30 36.828,8"></polygon></svg>                        Vue.js
+                      </p>
                       <p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="0.81em" height="1em" viewBox="0 0 256 317"><defs><linearGradient id="logosFlutter0" x1="3.952%" x2="75.897%" y1="26.993%" y2="52.919%"><stop offset="0%"/><stop offset="100%" stop-opacity="0"/></linearGradient></defs><path fill="#47c5fb" d="M157.666.001L.001 157.666l48.8 48.8L255.268.001zm-1.099 145.396l-84.418 84.418l48.984 49.716l48.71-48.71l85.425-85.424z"/><path fill="#00569e" d="m121.133 279.531l37.082 37.082h97.052l-85.425-85.792z"/><path fill="#00b5f8" d="m71.6 230.364l48.801-48.801l49.441 49.258l-48.709 48.71z"/><path fill="url(#logosFlutter0)" fill-opacity="0.8" d="m121.133 279.531l40.56-13.459l4.029-31.131z"/></svg>
                         Flutter
