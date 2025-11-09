@@ -195,41 +195,61 @@ npm run lint     # Vérifier le code
 
 ## 🌐 Déploiement sur GitHub Pages
 
-Ce portfolio est configuré pour être déployé automatiquement sur GitHub Pages avec un domaine personnalisé.
+Ce portfolio est configuré pour être déployé sur GitHub Pages avec un domaine personnalisé.
 
-### Configuration Initiale
+### Configuration Initiale (Une seule fois)
 
-1. **Sur GitHub**, allez dans Settings de votre repo :
-   - Pages → Source → **GitHub Actions**
-   - Custom domain → **www.ethan-ehrler.fr**
+1. **Créer le repository GitHub** :
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit - Portfolio"
+   git remote add origin https://github.com/Erlow38/next-portfolio.git
+   git branch -M main
+   git push -u origin main
+   ```
 
-2. **DNS de votre domaine** (chez votre registrar) :
+2. **Sur GitHub**, allez dans Settings de votre repo :
+   - Pages → Source → **Deploy from a branch**
+   - Branch → **gh-pages** / **(root)**
+   - Custom domain → **www.ethan-ehrler.fr** (Save)
+
+3. **DNS de votre domaine** (chez votre registrar) :
    ```
    Type: CNAME
    Name: www
    Value: erlow38.github.io
+   TTL: 3600
    ```
 
-### Déploiement Manuel
+### Déployer le Site
 
 ```bash
-# Build et déployer
+# Build et déployer en une commande
 npm run deploy
 ```
 
-### Déploiement Automatique
-
-Le workflow GitHub Actions (`.github/workflows/deploy.yml`) se déclenche automatiquement à chaque push sur `main`.
+Cette commande va :
+1. Builder le site en mode production
+2. Copier le fichier CNAME dans le dossier de sortie
+3. Créer le fichier .nojekyll
+4. Push le contenu du dossier `out/` vers la branche `gh-pages`
 
 ### Voir le Site
 
-Une fois déployé, votre portfolio sera accessible sur :
-- **Production** : https://www.ethan-ehrler.fr
-- **GitHub Pages** : https://erlow38.github.io/next-portfolio
+Une fois déployé (2-3 minutes), votre portfolio sera accessible sur :
+- 🌐 **Production** : https://www.ethan-ehrler.fr
+- 📦 **GitHub Pages** : https://erlow38.github.io/next-portfolio
 
-### Autres Options de Déploiement
-- **Vercel** - Déploiement instantané (recommandé pour le dev)
-- **Netlify** - Alternative à Vercel
+### Mise à jour du Site
+
+Après avoir modifié votre code :
+```bash
+git add .
+git commit -m "Update portfolio"
+git push
+npm run deploy
+```
 
 ## 🎯 Optimisations Incluses
 
