@@ -25,7 +25,7 @@ const BentoProjects = () => {
       demoUrl: 'https://rocket-decals.com',
       githubUrl: 'https://github.com/Rocket-Decals/rocket-decals.github.io',
       year: '2025',
-      team: 'Solo',
+      team: '2 personnes',
     },
     {
       title: 'Flux Particulaire',
