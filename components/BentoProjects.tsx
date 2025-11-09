@@ -165,22 +165,15 @@ const BentoProjects = () => {
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
-              initial={{ opacity: 0, scale: 0.8, rotateX: -20 }}
-              animate={isInView ? { opacity: 1, scale: 1, rotateX: 0 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               onMouseEnter={() => setExpandedProject(index)}
               onMouseLeave={() => setExpandedProject(null)}
               className={`${getSizeClasses(project.size)} relative group cursor-pointer`}
-              style={{ perspective: '1000px' }}
             >
-              <motion.div
-                animate={{
-                  rotateY: expandedProject === index ? 5 : 0,
-                  z: expandedProject === index ? 50 : 0,
-                }}
-                transition={{ duration: 0.3 }}
-                className={`w-full h-full bg-gradient-to-br ${project.color} rounded-3xl p-6 md:p-8 relative overflow-hidden shadow-2xl`}
-                style={{ transformStyle: 'preserve-3d' }}
+              <div
+                className={`w-full h-full bg-gradient-to-br ${project.color} rounded-3xl p-6 md:p-8 relative overflow-hidden shadow-2xl transition-all duration-300 hover:shadow-purple-500/20`}
               >
                 {/* Background pattern */}
                 <div className="absolute inset-0 opacity-20 z-0">
@@ -218,15 +211,8 @@ const BentoProjects = () => {
                   <div className="h-[60px] md:h-[70px]"></div>
                 </div>
 
-                {/* Blur overlay that covers entire card */}
-                {expandedProject === index && (
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute inset-0 bg-black/60 backdrop-blur-[3px] z-[15] rounded-3xl pointer-events-none"
-                  />
-                )}
+                {/* Subtle darkening on hover (desktop only) */}
+                <div className="absolute inset-0 bg-black/0 md:group-hover:bg-black/20 transition-all duration-300 z-[15] rounded-3xl pointer-events-none" />
 
                 {/* Action button - always visible on mobile, shown on hover on desktop */}
                 <button
@@ -237,18 +223,9 @@ const BentoProjects = () => {
                   <span>Voir les détails</span>
                 </button>
 
-                {/* Shine effect */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                  animate={{
-                    x: expandedProject === index ? ['0%', '200%'] : '0%',
-                  }}
-                  transition={{ duration: 0.8 }}
-                />
-
                 {/* Corner decoration */}
                 <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-white/30 rounded-tr-xl" />
-              </motion.div>
+              </div>
             </motion.div>
           ))}
         </div>

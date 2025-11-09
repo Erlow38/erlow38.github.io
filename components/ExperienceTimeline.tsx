@@ -101,10 +101,8 @@ const ExperienceTimeline = () => {
 
                 {/* Content card */}
                 <div className={`w-full md:w-5/12 ml-20 md:ml-0 ${index % 2 === 0 ? 'md:mr-auto md:pr-12' : 'md:ml-auto md:pl-12'}`}>
-                  <motion.div
-                    whileHover={{ scale: 1.05, rotateY: 5 }}
-                    className="glass-effect rounded-3xl p-6 md:p-8 border-2 border-purple-500/30 relative overflow-visible group"
-                    style={{ transformStyle: 'preserve-3d' }}
+                  <div
+                    className="glass-effect rounded-3xl p-6 md:p-8 border-2 border-purple-500/30 hover:border-purple-500/50 relative overflow-visible group transition-all duration-300 hover:shadow-purple-500/20"
                   >
                     {/* Year badge */}
                     <div className={`absolute -top-3 -right-3 px-4 py-2 bg-gradient-to-r ${exp.color} rounded-full text-white font-black text-sm shadow-lg z-20`}>
@@ -118,10 +116,8 @@ const ExperienceTimeline = () => {
                     </div>
 
                     {/* Glow effect */}
-                    <motion.div
-                      className={`absolute inset-0 bg-gradient-to-r ${exp.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300 blur-xl`}
-                    />
-                  </motion.div>
+                    <div className={`absolute inset-0 bg-gradient-to-r ${exp.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+                  </div>
                 </div>
               </motion.div>
             ))}

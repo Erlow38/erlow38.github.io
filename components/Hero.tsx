@@ -54,17 +54,11 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            onHoverStart={() => setHoveredCard('profile')}
-            onHoverEnd={() => setHoveredCard(null)}
-            className="col-span-6 md:col-span-4 row-span-2 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl p-6 relative overflow-hidden group cursor-pointer"
+            className="col-span-6 md:col-span-4 row-span-2 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl p-6 relative overflow-hidden group"
           >
-            <motion.div
-              animate={{ scale: hoveredCard === 'profile' ? 1.1 : 1 }}
-              transition={{ duration: 0.3 }}
-              className="w-full h-full flex items-center justify-center"
-            >
-              <div className="text-8xl">👨‍💻</div>
-            </motion.div>
+            <div className="w-full h-full flex items-center justify-center">
+              <div className="text-8xl transition-transform duration-300 group-hover:scale-110">👨‍💻</div>
+            </div>
             <div className="absolute bottom-4 left-4 text-white font-bold">Ethan Ehrler</div>
           </motion.div>
 
@@ -104,8 +98,7 @@ const Hero = () => {
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.3 + i * 0.05 }}
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  className="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm font-medium border border-orange-500/30"
+                  className="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm font-medium border border-orange-500/30 hover:bg-orange-500/30 hover:border-orange-500/50 transition-all cursor-default"
                 >
                   {skill}
                 </motion.span>
@@ -113,6 +106,7 @@ const Hero = () => {
             </div>
             <motion.div
               animate={{ rotate: hoveredCard === 'skills' ? 180 : 0 }}
+              transition={{ duration: 0.3 }}
               className="absolute -bottom-5 -right-5 text-9xl opacity-10"
             >
               ⚡
@@ -128,40 +122,37 @@ const Hero = () => {
           >
             <h3 className="text-white font-bold mb-4 text-lg">Contact</h3>
             <div className="space-y-3 md:space-y-3">
-              <motion.a
+              <a
                 href="https://github.com/Erlow38"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.05, x: 5 }}
                 className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors"
               >
                 <div className="w-10 h-10 rounded-xl bg-gray-800 flex items-center justify-center">
                   <Github size={20} />
                 </div>
                 <span className="font-medium">GitHub</span>
-              </motion.a>
-              <motion.a
+              </a>
+              <a
                 href="https://www.linkedin.com/in/ethan-ehrler-b5855a251/"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.05, x: 5 }}
                 className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors"
               >
                 <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center">
                   <Linkedin size={20} />
                 </div>
                 <span className="font-medium">LinkedIn</span>
-              </motion.a>
-              <motion.a
+              </a>
+              <a
                 href="mailto:ethan.ehrler@outlook.com"
-                whileHover={{ scale: 1.05, x: 5 }}
                 className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors"
               >
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
                   <Mail size={20} />
                 </div>
                 <span className="font-medium">Email</span>
-              </motion.a>
+              </a>
             </div>
           </motion.div>
 

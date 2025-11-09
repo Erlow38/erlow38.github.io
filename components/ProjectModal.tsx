@@ -95,9 +95,9 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                     </motion.button>
 
                     <motion.div
-                      initial={{ scale: 0, rotate: -180 }}
-                      animate={{ scale: 1, rotate: 0 }}
-                      transition={{ duration: 0.5, type: 'spring' }}
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ duration: 0.4, type: 'spring' }}
                       className="text-7xl mb-4"
                     >
                       {project.emoji}
