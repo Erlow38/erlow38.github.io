@@ -88,7 +88,7 @@ body {
   color: white;
 }
 
-/* Hide default cursor on desktop */
+/* Hide default cursor on desktop
 @media (min-width: 768px) {
   * {
     cursor: none !important;
@@ -97,7 +97,7 @@ body {
   a, button, [role="button"] {
     cursor: none !important;
   }
-}
+} */
 
 /* Floating animation */
 @keyframes float {
