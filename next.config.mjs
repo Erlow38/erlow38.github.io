@@ -1,8 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   images: {
-    domains: ['images.unsplash.com'],
+    unoptimized: true,
   },
+  // Pas besoin de basePath avec domaine personnalisé
+  // basePath: '',
+  // assetPrefix: '',
 };
 
 export default nextConfig;

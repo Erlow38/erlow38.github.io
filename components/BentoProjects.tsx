@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
-import { ExternalLink, Github, Eye, Rocket } from 'lucide-react'
+import { ExternalLink, Eye, Rocket } from 'lucide-react'
 import ProjectModal from './ProjectModal'
 
 const BentoProjects = () => {

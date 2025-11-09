@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
-import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter } from 'lucide-react'
+import { Send, Github, Linkedin } from 'lucide-react'
 
 const Contact = () => {
   const ref = useRef(null)
@@ -81,7 +81,7 @@ const Contact = () => {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
-            Discutons autour d'un café ☕
+            Discutons autour d&apos;un café ☕
           </p>
         </motion.div>
 

@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Briefcase, GraduationCap, Award } from 'lucide-react'
+import React from 'react'
 
 const ExperienceTimeline = () => {
   const ref = useRef(null)
