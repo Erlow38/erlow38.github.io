@@ -68,16 +68,17 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
           />
 
           {/* Modal */}
-          <div className="fixed inset-0 z-[101] flex items-center justify-center p-4 overflow-y-auto">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              transition={{ type: 'spring', duration: 0.5 }}
-              onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-4xl my-8"
-            >
-              <div className={`glass-effect rounded-3xl border-2 border-white/20 shadow-2xl overflow-hidden`}>
+          <div className="fixed inset-0 z-[101] overflow-y-auto overscroll-contain">
+            <div className="min-h-screen px-4 py-8 flex items-center justify-center">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                transition={{ type: 'spring', duration: 0.5 }}
+                onClick={(e) => e.stopPropagation()}
+                className="relative w-full max-w-4xl"
+              >
+              <div className={`glass-effect rounded-3xl border-2 border-white/20 shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto`}>
                 {/* Header with gradient */}
                 <div className={`bg-gradient-to-br ${project.color} p-8 md:p-12 relative overflow-hidden`}>
                   <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIxLTEuNzktNC00LTRzLTQgMS43OS00IDQgMS43OSA0IDQgNCA0LTEuNzkgNC00em0wLTEwYzAtMi4yMS0xLjc5LTQtNC00cy00IDEuNzktNCA0IDEuNzkgNCA0IDQgNC0xLjc5IDQtNHoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-20" />
@@ -241,6 +242,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                 </div>
               </div>
             </motion.div>
+            </div>
           </div>
 
           {/* Lightbox for full-size images */}

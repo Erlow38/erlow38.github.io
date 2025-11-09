@@ -168,8 +168,8 @@ const BentoProjects = () => {
               initial={{ opacity: 0, scale: 0.8, rotateX: -20 }}
               animate={isInView ? { opacity: 1, scale: 1, rotateX: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              onHoverStart={() => setExpandedProject(index)}
-              onHoverEnd={() => setExpandedProject(null)}
+              onMouseEnter={() => setExpandedProject(index)}
+              onMouseLeave={() => setExpandedProject(null)}
               className={`${getSizeClasses(project.size)} relative group cursor-pointer`}
               style={{ perspective: '1000px' }}
             >
@@ -228,21 +228,14 @@ const BentoProjects = () => {
                   />
                 )}
 
-                {/* Action button - shown on hover - always on top */}
-                <motion.button
+                {/* Action button - always visible on mobile, shown on hover on desktop */}
+                <button
                   onClick={() => setSelectedProject(index)}
-                  initial={{ opacity: 0 }}
-                  animate={{
-                    opacity: expandedProject === index ? 1 : 0,
-                  }}
-                  transition={{ duration: 0.2 }}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6 bg-white/30 backdrop-blur-md hover:bg-white/40 text-white rounded-xl py-2.5 md:py-3 px-4 flex items-center justify-center gap-2 text-sm md:text-base font-bold transition-colors shadow-lg border border-white/20 z-[20]"
+                  className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6 bg-white/30 backdrop-blur-md hover:bg-white/40 active:scale-95 text-white rounded-xl py-2.5 md:py-3 px-4 flex items-center justify-center gap-2 text-sm md:text-base font-bold transition-all shadow-lg border border-white/20 z-[20] opacity-100 md:opacity-0 md:group-hover:opacity-100"
                 >
                   <Eye size={18} className="flex-shrink-0" />
                   <span>Voir les détails</span>
-                </motion.button>
+                </button>
 
                 {/* Shine effect */}
                 <motion.div
