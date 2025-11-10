@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
-import { Send, Github, Linkedin } from 'lucide-react'
+import { Send, Github, Linkedin, MoreHorizontal } from 'lucide-react'
 
 const Contact = () => {
   const ref = useRef(null)
@@ -55,6 +55,7 @@ const Contact = () => {
   const socialLinks = [
     { icon: <Github size={24} />, href: 'https://github.com/Erlow38', label: 'GitHub', color: 'from-purple-500 to-pink-500' },
     { icon: <Linkedin size={24} />, href: 'https://www.linkedin.com/in/ethan-ehrler-b5855a251/', label: 'LinkedIn', color: 'from-blue-500 to-cyan-500' },
+    { icon: <MoreHorizontal size={24} />, href: 'https://erlinks.github.io/', label: 'Plus de réseaux', color: 'from-orange-500 to-red-500' },
   ]
 
   return (

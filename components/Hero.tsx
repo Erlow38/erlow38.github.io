@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, Sparkles, Zap, Code2 } from 'lucide-react'
+import { Github, Linkedin, Mail, Sparkles, Zap, Code2, Twitter, MoreHorizontal } from 'lucide-react'
 import { useState } from 'react'
 
 const Hero = () => {
@@ -30,7 +30,7 @@ const Hero = () => {
             <div className="relative z-10">
               <div className="flex items-center gap-2 mb-3 md:mb-4">
                 <Sparkles className="text-white/80" size={18} />
-                <span className="text-white/80 font-mono text-xs md:text-sm">Ethan Ehrler</span>
+                <span className="text-white/80 font-mono text-xs md:text-sm">Erlow</span>
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-white mb-3 md:mb-4 leading-tight">
                 Designer<br />
@@ -152,6 +152,17 @@ const Hero = () => {
                   <Mail size={20} />
                 </div>
                 <span className="font-medium">Email</span>
+              </a>
+              <a
+                href="https://erlinks.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <MoreHorizontal size={20} />
+                </div>
+                <span className="font-medium">Plus de réseaux</span>
               </a>
             </div>
           </motion.div>
