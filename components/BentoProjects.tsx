@@ -37,7 +37,7 @@ const BentoProjects = () => {
       fullDescription: 'Flux Particulaires est un site web permettant de visualiser des flux de particules entre plusieurs fenêtres de navigateur en temps réel.',
       images: ['/projects/flux-particulaire/1.mp4', '/projects/flux-particulaire/2.png'],
       demoUrl: 'https://www.ethan-ehrler.fr/flux-particulaire/',
-      githubUrl: 'https://github.com/Erlow38/erlos',
+      githubUrl: 'https://github.com/Erlow38/flux-particulaire',
       year: '2025',
       team: 'Solo',
     },

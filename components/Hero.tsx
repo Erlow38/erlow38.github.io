@@ -87,10 +87,10 @@ const Hero = () => {
             onHoverEnd={() => setHoveredCard(null)}
             className="col-span-12 md:col-span-5 row-span-2 glass-effect rounded-3xl p-6 relative overflow-hidden border-2 border-orange-500/30 group"
           >
-            <h3 className="text-white font-bold mb-4 flex items-center gap-2">
+            <div className="text-white font-bold mb-4 flex items-center gap-2 text-base">
               <Zap className="text-orange-500" size={20} />
               Stack Technique
-            </h3>
+            </div>
             <div className="flex flex-wrap gap-2">
               {['React', 'Next.js', 'TypeScript', 'Vue.js', 'Angular', 'Python', 'Figma'].map((skill, i) => (
                 <motion.span
@@ -120,7 +120,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.25 }}
             className="col-span-12 md:col-span-3 row-span-3 md:row-span-2 glass-effect rounded-3xl p-6 relative overflow-hidden border-2 border-pink-500/30"
           >
-            <h3 className="text-white font-bold mb-4 text-lg">Contact</h3>
+            <div className="text-white font-bold mb-4 text-lg">Contact</div>
             <div className="space-y-3 md:space-y-3">
               <a
                 href="https://github.com/Erlow38"
