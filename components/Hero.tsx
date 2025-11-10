@@ -37,7 +37,7 @@ const Hero = () => {
                 <span className="text-black/40">& Développeur</span>
               </h1>
               <p className="text-white/90 text-sm md:text-base lg:text-lg max-w-xl">
-              J’apporte une touche unique à chaque projet 🚀
+              Développeur web passionné par le design et l’expérience utilisateur. J’aime créer des interfaces modernes, fluides et esthétiques. J’apporte une touche unique à chaque projet 🚀
               </p>
             </div>
 
