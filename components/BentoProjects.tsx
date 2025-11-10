@@ -115,7 +115,7 @@ const BentoProjects = () => {
       tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'SQLite', 'UML', 'WebSocket'],
       size: 'small',
       fullDescription: 'Dans le cadre de ma formation à l\'IUT 2 de Grenoble, j\'ai eu l\'occasion de travailler sur le projet Intemporal. Ce projet était un site de vente aux enchères de montres, permettant de vendre et d\'acheter des montres. Nous avons obtenu un prix du jury de l\'IUT Informatique de Grenoble pour la qualité de notre prototype.',
-      images: ['/projects/intemporal/1.png', '/projects/intemporal/2.png', '/projects/intemporal/3.png', '/projects/intemporal/4.png'],
+      images: ['/projects/intemporal/1.png', '/projects/intemporal/2.png', '/projects/intemporal/3.png', '/projects/intemporal/4.png', '/projects/intemporal/5.png'],
       demoUrl: 'https://docs.google.com/document/d/1ocvxQ9nPROopoYBKqNfltIVitiJN1vFm_hQEb5EWIsM/edit?tab=t.0#heading=h.z6ne0og04bp5',
       year: '2023',
       team: '6 personnes',
