@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, Sparkles, Zap, Code2, Twitter, MoreHorizontal } from 'lucide-react'
+import { Github, Linkedin, Mail, Sparkles, Zap, Code2, MoreHorizontal } from 'lucide-react'
 import { useState } from 'react'
 
 const Hero = () => {
