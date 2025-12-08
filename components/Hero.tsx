@@ -126,9 +126,9 @@ const Hero = () => {
                 href="https://github.com/Erlow38"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors"
+                className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group"
               >
-                <div className="w-10 h-10 rounded-xl bg-gray-800 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-gray-800 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Github size={20} />
                 </div>
                 <span className="font-medium">GitHub</span>
@@ -137,18 +137,18 @@ const Hero = () => {
                 href="https://www.linkedin.com/in/ethan-ehrler-b5855a251/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors"
+                className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group"
               >
-                <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Linkedin size={20} />
                 </div>
                 <span className="font-medium">LinkedIn</span>
               </a>
               <a
                 href="mailto:ethan.ehrler@outlook.com"
-                className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors"
+                className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group"
               >
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Mail size={20} />
                 </div>
                 <span className="font-medium">Email</span>
