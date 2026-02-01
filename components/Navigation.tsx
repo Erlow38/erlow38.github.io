@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Menu, X, Home, User, Briefcase, Code, Mail } from 'lucide-react'
+import { Menu, X, Home, User, Briefcase, Code, Mail, GraduationCap } from 'lucide-react'
 import { useState } from 'react'
 
 const Navigation = () => {
@@ -12,6 +12,7 @@ const Navigation = () => {
     { name: 'About', href: '#about', icon: User },
     { name: 'Skills', href: '#skills', icon: Code },
     { name: 'Projets', href: '#projects', icon: Briefcase },
+    { name: 'Parcours', href: '#parcours', icon: GraduationCap },
     { name: 'Contact', href: '#contact', icon: Mail },
   ]
 

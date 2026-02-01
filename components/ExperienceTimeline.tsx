@@ -11,7 +11,16 @@ const ExperienceTimeline = () => {
 
   const experiences = [
     {
-      year: '2024 - présent',
+      year: 'Fév. - Mars 2026',
+      title: 'Cours de vacation',
+      company: 'IUT 2 de Grenoble',
+      description: 'Enseignement en parallèle de mon poste actuel chez Erplain.',
+      icon: '👨‍🏫',
+      color: 'from-amber-500 to-orange-500',
+      type: 'education',
+    },
+    {
+      year: 'Oct. 2024 - présent',
       title: 'Développeur web',
       company: 'Erplain',
       description: 'Développement de l\'application Erplain',
@@ -20,7 +29,7 @@ const ExperienceTimeline = () => {
       type: 'work',
     },
     {
-      year: '2023 - 2024',
+      year: 'Sept. 2023 - Août 2024',
       title: 'Alternance développeur web',
       company: 'Sercel',
       description: 'Développement de l\'application de supervision dans la maintenance prédictive',
@@ -29,7 +38,7 @@ const ExperienceTimeline = () => {
       type: 'award',
     },
     {
-      year: '2023',
+      year: 'Avr. - Juin 2023',
       title: 'Stage développeur web',
       company: 'LIG',
       description: "Extension de l'outil LOMET en support à l'ingénierie des méthodes",
@@ -38,7 +47,7 @@ const ExperienceTimeline = () => {
       type: 'work',
     },
     {
-      year: '2021 - 2024',
+      year: 'Sept. 2021 - Juil. 2024',
       title: 'BUT Informatique',
       company: 'IUT 2 de Grenoble',
       description: 'Formation en informatique',
@@ -49,7 +58,7 @@ const ExperienceTimeline = () => {
   ]
 
   return (
-    <section className="py-20 md:py-32 relative overflow-hidden">
+    <section id="parcours" className="py-20 md:py-32 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           ref={ref}
@@ -116,7 +125,7 @@ const ExperienceTimeline = () => {
                     </div>
 
                     {/* Glow effect */}
-                    <div className={`absolute inset-0 bg-gradient-to-r ${exp.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+                    <div className={`absolute inset-0 rounded-3xl bg-gradient-to-r ${exp.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                   </div>
                 </div>
               </motion.div>
