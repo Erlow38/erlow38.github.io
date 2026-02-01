@@ -87,7 +87,7 @@ const BentoProjects = () => {
       color: 'from-green-500 to-emerald-600',
       tags: ['HTML', 'CSS', 'TypeScript', 'React', 'JointJS', 'Expressjs'],
       size: 'medium',
-      fullDescription: 'LOMET est un modélisateur de méthodologie de travail permettant de réprésenter graphiquement celle-ci.',
+      fullDescription: 'LOMET est un modélisateur de méthodologie de travail permettant de réprésenter graphiquement celle-ci. Projet réalisé dans le cadre de mon stage au LIG.',
       images: ['/projects/lomet/1.png', '/projects/lomet/2.png'],
       demoUrl: 'https://drive.google.com/file/d/1hpgYSliFsI8sSBSgMkX8zmwMjnmBtkAQ/view?usp=sharing',
       year: '2023',
