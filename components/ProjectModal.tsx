@@ -78,10 +78,10 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                 onClick={(e) => e.stopPropagation()}
                 className="relative w-full max-w-4xl"
               >
-              <div className={`glass-effect rounded-3xl border-2 border-white/20 shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto`}>
-                {/* Header with gradient */}
-                <div className={`bg-gradient-to-br ${project.color} p-8 md:p-12 relative overflow-hidden`}>
-                  <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIxLTEuNzktNC00LTRzLTQgMS43OS00IDQgMS43OSA0IDQgNCA0LTEuNzkgNC00em0wLTEwYzAtMi4yMS0xLjc5LTQtNC00cy00IDEuNzktNCA0IDEuNzkgNCA0IDQgNC0xLjc5IDQtNHoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-20" />
+              <div className="glass-effect rounded-3xl border border-white/[0.12] shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
+                {/* Header - chrome metallic */}
+                <div className="p-8 md:p-12 relative overflow-hidden border-b border-white/[0.08]" style={{ background: 'linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 35%, #404040 100%)' }}>
+                  <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNiI+PHBhdGggZD0iTTM2IDM0YzAtMi4yMS0xLjc5LTQtNC00cy00IDEuNzktNCA0IDEuNzkgNCA0IDQgNC0xLjc5IDQtNHptMC0xMGMwLTIuMjEtMS43OS00LTQtNHMtNCAxLjc5LTQgNCAxLjc5IDQgNCA0IDQtMS43OSA0LTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-40" />
                   
                   <div className="relative">
                     {/* Close button */}
@@ -89,7 +89,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                       onClick={onClose}
                       whileHover={{ scale: 1.1, rotate: 90 }}
                       whileTap={{ scale: 0.9 }}
-                      className="absolute -top-2 -right-2 w-10 h-10 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors border-2 border-white/20"
+                      className="absolute -top-2 -right-2 w-10 h-10 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-neutral-100 hover:bg-black/70 transition-colors border border-white/20"
                     >
                       <X size={20} />
                     </motion.button>
@@ -102,17 +102,17 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                     >
                       {project.emoji}
                     </motion.div>
-                    <h2 className="text-4xl md:text-5xl font-black text-white mb-3">
+                    <h2 className="text-4xl md:text-5xl font-black text-neutral-100 mb-3">
                       {project.title}
                     </h2>
-                    <p className="text-white/90 text-lg mb-6">
+                    <p className="text-neutral-300 text-lg mb-6">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white font-semibold text-sm"
+                          className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-neutral-200 font-semibold text-sm border border-white/10"
                         >
                           {tag}
                         </span>
@@ -127,23 +127,23 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                     {project.year && (
                       <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center">
-                          <Calendar className="text-purple-400" size={24} />
+                        <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center">
+                          <Calendar className="text-neutral-400" size={24} />
                         </div>
                         <div>
-                          <p className="text-xs text-gray-400 uppercase tracking-wide">Année</p>
-                          <p className="text-white font-semibold">{project.year}</p>
+                          <p className="text-xs text-neutral-500 uppercase tracking-wide">Année</p>
+                          <p className="text-neutral-100 font-semibold">{project.year}</p>
                         </div>
                       </div>
                     )}
                     {project.team && (
                       <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center">
-                          <Users className="text-pink-400" size={24} />
+                        <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center">
+                          <Users className="text-neutral-400" size={24} />
                         </div>
                         <div>
-                          <p className="text-xs text-gray-400 uppercase tracking-wide">Équipe</p>
-                          <p className="text-white font-semibold">{project.team}</p>
+                          <p className="text-xs text-neutral-500 uppercase tracking-wide">Équipe</p>
+                          <p className="text-neutral-100 font-semibold">{project.team}</p>
                         </div>
                       </div>
                     )}
@@ -152,8 +152,8 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                   {/* Full description */}
                   {project.fullDescription && (
                     <div className="mb-8">
-                      <h3 className="text-2xl font-black text-white mb-4">À propos du projet</h3>
-                      <p className="text-gray-300 leading-relaxed">
+                      <h3 className="text-2xl font-black text-neutral-100 mb-4">À propos du projet</h3>
+                      <p className="text-neutral-400 leading-relaxed">
                         {project.fullDescription}
                       </p>
                     </div>
@@ -162,7 +162,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                   {/* Media Gallery (Images & Videos) */}
                   {project.images && project.images.length > 0 && (
                     <div className="mb-8">
-                      <h3 className="text-2xl font-black text-white mb-4">Aperçu</h3>
+                      <h3 className="text-2xl font-black text-neutral-100 mb-4">Aperçu</h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {project.images.map((media, idx) => {
                           const isVideo = media.match(/\.(mp4|webm|mov)$/i)
@@ -173,7 +173,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                               initial={{ opacity: 0, scale: 0.9 }}
                               animate={{ opacity: 1, scale: 1 }}
                               transition={{ delay: idx * 0.1 }}
-                              className="rounded-2xl overflow-hidden border-2 border-white/10 hover:border-purple-500/40 transition-colors bg-black/20 aspect-video relative group cursor-pointer"
+                              className="rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-colors bg-black/20 aspect-video relative group cursor-pointer"
                               onClick={() => !isVideo && setLightboxImage(media)}
                             >
                               {isVideo ? (
@@ -219,7 +219,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="flex-1 min-w-[200px] px-6 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 rounded-2xl text-white font-black hover:shadow-lg hover:shadow-purple-500/50 transition-all flex items-center justify-center gap-3"
+                        className="flex-1 min-w-[200px] px-6 py-4 rounded-2xl text-neutral-100 font-black border border-white/20 bg-white/10 hover:bg-white/15 transition-all flex items-center justify-center gap-3"
                       >
                         <ExternalLink size={20} />
                         <span>Voir la démo</span>
@@ -232,7 +232,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="flex-1 min-w-[200px] px-6 py-4 glass-effect border-2 border-white/20 rounded-2xl text-white font-bold hover:border-purple-500/50 transition-all flex items-center justify-center gap-3"
+                        className="flex-1 min-w-[200px] px-6 py-4 glass-effect border border-white/20 rounded-2xl text-neutral-100 font-bold hover:border-white/30 transition-all flex items-center justify-center gap-3"
                       >
                         <Github size={20} />
                         <span>Voir le code</span>
@@ -265,7 +265,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                     }}
                     whileHover={{ scale: 1.1, rotate: 90 }}
                     whileTap={{ scale: 0.9 }}
-                    className="absolute top-4 right-4 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors border-2 border-white/20 z-10"
+                    className="absolute top-4 right-4 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-neutral-100 hover:bg-white/20 transition-colors border border-white/20 z-10"
                   >
                     <X size={24} />
                   </motion.button>

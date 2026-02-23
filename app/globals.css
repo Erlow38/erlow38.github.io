@@ -3,12 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #f5f5f5;
-  --accent: #6366f1;
-  --accent-hover: #4f46e5;
-  --card-bg: #1a1a1a;
-  --border: #2a2a2a;
+  --background: #000000;
+  --foreground: #e5e5e5;
+  --accent: #a3a3a3;
+  --accent-hover: #d4d4d4;
+  --card-bg: #0a0a0a;
+  --border: #262626;
+  --chrome-highlight: #525252;
+  --chrome-mid: #404040;
+  --chrome-shadow: #171717;
 }
 
 * {
@@ -25,10 +28,8 @@ body {
   color: var(--foreground);
   background: var(--background);
   background-image: 
-    radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.1) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.1) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(249, 115, 22, 0.1) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(59, 130, 246, 0.1) 0px, transparent 50%);
+    radial-gradient(at 20% 30%, rgba(82, 82, 82, 0.08) 0px, transparent 50%),
+    radial-gradient(at 80% 70%, rgba(64, 64, 64, 0.06) 0px, transparent 50%);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   overflow-x: hidden;
@@ -52,12 +53,26 @@ body {
   background: var(--accent);
 }
 
-/* Gradient text */
+/* Gradient text - Y2K chrome */
 .gradient-text {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #d4d4d4 0%, #a3a3a3 35%, #525252 70%, #737373 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Chrome / liquid metal card effect */
+.chrome-card {
+  background: linear-gradient(145deg, 
+    var(--chrome-shadow) 0%, 
+    var(--chrome-mid) 25%, 
+    var(--chrome-highlight) 50%, 
+    var(--chrome-mid) 75%, 
+    var(--chrome-shadow) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 4px 24px rgba(0, 0, 0, 0.4);
 }
 
 /* Font weight utilities */
@@ -70,11 +85,12 @@ body {
   perspective: 1000px;
 }
 
-/* Glass effect */
+/* Glass effect - Y2K dark metallic */
 .glass-effect {
-  background: rgba(26, 26, 26, 0.7);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
 /* Smooth transitions */
@@ -133,13 +149,13 @@ body {
 
 .glitch-text::before {
   animation: glitch-1 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-  color: #0ff;
+  color: #a3a3a3;
   z-index: -1;
 }
 
 .glitch-text::after {
   animation: glitch-2 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-  color: #f0f;
+  color: #737373;
   z-index: -2;
 }
 

@@ -20,11 +20,11 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body>
-        {/* Fixed background orbs */}
+        {/* Fixed background - Y2K metallic orbs */}
         <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px]" />
-          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-pink-500/10 rounded-full blur-[120px]" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px]" />
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-neutral-600/8 rounded-full blur-[120px]" />
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-neutral-500/6 rounded-full blur-[120px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-white/[0.03] rounded-full blur-[100px]" />
         </div>
         
         {/* Content */}

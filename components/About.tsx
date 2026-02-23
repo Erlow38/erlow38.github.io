@@ -15,28 +15,28 @@ const About = () => {
       title: 'Développement',
       description: 'React, Next.js, TypeScript, Vue.js, Angular, Python',
       emoji: '💻',
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-neutral-600 to-neutral-500',
     },
     {
       icon: <Palette size={32} />,
       title: 'Design',
       description: 'UI/UX, Figma, Adobe Creative Suite',
       emoji: '🎨',
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-neutral-600 to-neutral-500',
     },
     {
       icon: <Rocket size={32} />,
       title: 'Performance',
       description: 'Optimisation, SEO, Accessibilité',
       emoji: '⚡',
-      color: 'from-orange-500 to-red-500',
+      color: 'from-neutral-600 to-neutral-500',
     },
     {
       icon: <Users size={32} />,
       title: 'Collaboration',
       description: 'Agile, Git, Communication',
       emoji: '🤝',
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-neutral-600 to-neutral-500',
     },
   ]
 
@@ -59,11 +59,11 @@ const About = () => {
             <span className="text-6xl">👋</span>
           </motion.div>
           <h2 className="text-4xl md:text-6xl font-black mb-4">
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-neutral-200 via-neutral-400 to-neutral-500 bg-clip-text text-transparent">
               À Propos de Moi
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-neutral-500 max-w-3xl mx-auto">
             Passionné par la création de projets innovants et de qualité
           </p>
         </motion.div>
@@ -78,7 +78,7 @@ const About = () => {
                 duration: 0.5, 
                 delay: index * 0.1,
               }}
-              className="glass-effect rounded-3xl p-6 md:p-8 relative overflow-hidden border-2 border-purple-500/20 hover:border-purple-500/40 transition-all h-full group cursor-pointer"
+              className="glass-effect rounded-3xl p-6 md:p-8 relative overflow-hidden border border-white/[0.08] hover:border-white/20 transition-all h-full group cursor-pointer"
             >
               {/* Gradient background on hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
@@ -88,10 +88,10 @@ const About = () => {
                 <div className="text-5xl mb-4 transition-transform duration-300 group-hover:scale-110">
                   {skill.emoji}
                 </div>
-                <h3 className="text-xl font-black text-white mb-2">
+                <h3 className="text-xl font-black text-neutral-100 mb-2">
                   {skill.title}
                 </h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-neutral-500 text-sm">
                   {skill.description}
                 </p>
               </div>

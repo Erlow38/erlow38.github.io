@@ -23,7 +23,7 @@ const Navigation = () => {
       className="fixed top-8 left-0 right-0 z-50 px-4"
     >
       <div className="container mx-auto max-w-6xl">
-        <div className="glass-effect rounded-full border-2 border-white/10 shadow-2xl px-4 md:px-6 py-3 backdrop-blur-xl">
+        <div className="glass-effect rounded-full border border-white/[0.08] shadow-2xl px-4 md:px-6 py-3 backdrop-blur-xl">
           <div className="flex items-center justify-between">
           <motion.a
             href="#hero"
@@ -36,7 +36,7 @@ const Navigation = () => {
               alt="Logo" 
               className="w-8 h-8 md:w-10 md:h-10 object-contain"
             />
-            <span className="text-lg md:text-xl font-black bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent hidden sm:inline">
+            <span className="text-lg md:text-xl font-black bg-gradient-to-r from-neutral-200 via-neutral-400 to-neutral-500 bg-clip-text text-transparent hidden sm:inline">
               Ethan Ehrler
             </span>
           </motion.a>
@@ -51,7 +51,7 @@ const Navigation = () => {
                   href={item.href}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-3 py-2 rounded-full text-gray-300 hover:text-white hover:bg-white/10 transition-all flex items-center gap-2 group"
+                  className="px-3 py-2 rounded-full text-neutral-400 hover:text-neutral-100 hover:bg-white/5 transition-all flex items-center gap-2 group"
                 >
                   <Icon size={16} className="group-hover:rotate-12 transition-transform" />
                   <span className="text-sm font-medium whitespace-nowrap">{item.name}</span>
@@ -67,7 +67,7 @@ const Navigation = () => {
             whileTap={{ scale: 0.9 }}
             aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={isOpen}
-            className="lg:hidden text-white w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center flex-shrink-0"
+            className="lg:hidden text-neutral-100 w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center flex-shrink-0"
           >
             {isOpen ? <X size={20} /> : <Menu size={20} />}
           </motion.button>
@@ -82,7 +82,7 @@ const Navigation = () => {
             initial={{ opacity: 0, y: -20, scale: 0.95 }}
             animate={{ opacity: 1, y: 10, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.95 }}
-            className="lg:hidden mt-4 glass-effect rounded-3xl border-2 border-white/10 shadow-2xl p-4 backdrop-blur-xl"
+            className="lg:hidden mt-4 glass-effect rounded-3xl border border-white/[0.08] shadow-2xl p-4 backdrop-blur-xl"
           >
             {navItems.map((item, index) => {
               const Icon = item.icon
@@ -94,9 +94,9 @@ const Navigation = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
-                  className="flex items-center gap-3 px-4 py-3 rounded-2xl text-gray-300 hover:text-white hover:bg-white/10 transition-all group"
+                  className="flex items-center gap-3 px-4 py-3 rounded-2xl text-neutral-400 hover:text-neutral-100 hover:bg-white/5 transition-all group"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0 text-neutral-300">
                     <Icon size={20} />
                   </div>
                   <span className="font-medium">{item.name}</span>

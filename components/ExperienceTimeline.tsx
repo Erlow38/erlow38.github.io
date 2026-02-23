@@ -16,7 +16,7 @@ const ExperienceTimeline = () => {
       company: 'IUT 2 de Grenoble',
       description: 'Enseignement en parallèle de mon poste actuel chez Erplain.',
       icon: '👨‍🏫',
-      color: 'from-amber-500 to-orange-500',
+      color: 'from-neutral-600 to-neutral-500',
       type: 'education',
     },
     {
@@ -25,7 +25,7 @@ const ExperienceTimeline = () => {
       company: 'Erplain',
       description: 'Développement de l\'application Erplain',
       icon: '💼',
-      color: 'from-orange-500 to-red-600',
+      color: 'from-neutral-600 to-neutral-500',
       type: 'work',
     },
     {
@@ -34,7 +34,7 @@ const ExperienceTimeline = () => {
       company: 'Sercel',
       description: 'Développement de l\'application de supervision dans la maintenance prédictive',
       icon: '🏆',
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-neutral-600 to-neutral-500',
       type: 'award',
     },
     {
@@ -43,7 +43,7 @@ const ExperienceTimeline = () => {
       company: 'LIG',
       description: "Extension de l'outil LOMET en support à l'ingénierie des méthodes",
       icon: '🔧',
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-neutral-600 to-neutral-500',
       type: 'work',
     },
     {
@@ -52,7 +52,7 @@ const ExperienceTimeline = () => {
       company: 'IUT 2 de Grenoble',
       description: 'Formation en informatique',
       icon: '🎓',
-      color: 'from-green-500 to-emerald-600',
+      color: 'from-neutral-600 to-neutral-500',
       type: 'education',
     },
   ]
@@ -76,7 +76,7 @@ const ExperienceTimeline = () => {
             <span className="text-6xl">⏳</span>
           </motion.div>
           <h2 className="text-4xl md:text-6xl font-black mb-4">
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-neutral-200 via-neutral-400 to-neutral-500 bg-clip-text text-transparent">
               Mon Parcours
             </span>
           </h2>
@@ -85,7 +85,7 @@ const ExperienceTimeline = () => {
         {/* Timeline */}
         <div className="max-w-5xl mx-auto relative">
           {/* Vertical line */}
-          <div className="absolute left-[22px] md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 via-pink-500 to-orange-500 md:-translate-x-1/2" />
+          <div className="absolute left-[22px] md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-neutral-600 via-neutral-500 to-neutral-600 md:-translate-x-1/2" />
 
           <div className="space-y-8 md:space-y-16">
             {experiences.map((exp, index) => (
@@ -103,7 +103,7 @@ const ExperienceTimeline = () => {
                   initial={{ scale: 0 }}
                   animate={isInView ? { scale: 1 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.2 + 0.3 }}
-                  className={`absolute left-0 md:left-[calc(50%_-_24px)] w-12 h-12 rounded-full bg-gradient-to-br ${exp.color} flex items-center justify-center text-2xl shadow-lg z-10 border-4 border-black`}
+                  className={`absolute left-0 md:left-[calc(50%_-_24px)] w-12 h-12 rounded-full bg-gradient-to-br ${exp.color} flex items-center justify-center text-2xl shadow-lg z-10 border-2 border-white/20`}
                 >
                   {exp.icon}
                 </motion.div>
@@ -111,7 +111,7 @@ const ExperienceTimeline = () => {
                 {/* Content card */}
                 <div className={`w-full md:w-5/12 ml-20 md:ml-0 ${index % 2 === 0 ? 'md:mr-auto md:pr-12' : 'md:ml-auto md:pl-12'}`}>
                   <div
-                    className="glass-effect rounded-3xl p-6 md:p-8 border-2 border-purple-500/30 hover:border-purple-500/50 relative overflow-visible group transition-all duration-300 hover:shadow-purple-500/20"
+                    className="glass-effect rounded-3xl p-6 md:p-8 border border-white/[0.08] hover:border-white/20 relative overflow-visible group transition-all duration-300"
                   >
                     {/* Year badge */}
                     <div className={`absolute -top-3 -right-3 px-4 py-2 bg-gradient-to-r ${exp.color} rounded-full text-white font-black text-sm shadow-lg z-20`}>
@@ -119,9 +119,9 @@ const ExperienceTimeline = () => {
                     </div>
 
                     <div className="mb-4 pr-16">
-                      <h3 className="text-xl md:text-2xl font-black text-white mb-2">{exp.title}</h3>
-                      <p className="text-purple-400 font-semibold mb-3">{exp.company}</p>
-                      <p className="text-gray-400 text-sm md:text-base">{exp.description}</p>
+                      <h3 className="text-xl md:text-2xl font-black text-neutral-100 mb-2">{exp.title}</h3>
+                      <p className="text-neutral-400 font-semibold mb-3">{exp.company}</p>
+                      <p className="text-neutral-500 text-sm md:text-base">{exp.description}</p>
                     </div>
 
                     {/* Glow effect */}

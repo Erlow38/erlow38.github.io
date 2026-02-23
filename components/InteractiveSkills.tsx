@@ -42,11 +42,11 @@ const InteractiveSkills = () => {
             <span className="text-6xl">🛠️</span>
           </motion.div>
           <h2 className="text-4xl md:text-6xl font-black mb-4">
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-neutral-200 via-neutral-400 to-neutral-500 bg-clip-text text-transparent">
               Technologies & Outils
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-neutral-500 max-w-3xl mx-auto">
             Une sélection des technologies avec lesquelles je travaille au quotidien
           </p>
         </motion.div>
@@ -61,12 +61,11 @@ const InteractiveSkills = () => {
                 duration: 0.5, 
                 delay: index * 0.05,
               }}
-              className="glass-effect p-4 md:p-6 rounded-3xl group cursor-pointer relative border-2 border-white/10 hover:border-purple-500/30 transition-all hover:scale-105"
+              className="glass-effect p-4 md:p-6 rounded-3xl group cursor-pointer relative border border-white/[0.08] hover:border-white/20 transition-all hover:scale-105"
             >
-              {/* Glow effect on hover */}
+              {/* Glow effect on hover - subtle silver */}
               <div 
-                className="absolute inset-0 rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"
-                style={{ backgroundColor: skill.color }}
+                className="absolute inset-0 rounded-3xl blur-xl opacity-0 group-hover:opacity-15 transition-opacity duration-300 bg-neutral-500"
               />
 
               {/* Content */}
@@ -78,7 +77,7 @@ const InteractiveSkills = () => {
 
                 {/* Skill name */}
                 <h3 
-                  className="text-gray-300 font-semibold text-center text-xs md:text-sm transition-colors duration-300 group-hover:text-white"
+                  className="text-neutral-400 font-semibold text-center text-xs md:text-sm transition-colors duration-300 group-hover:text-neutral-100"
                 >
                   {skill.name}
                 </h3>
