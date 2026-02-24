@@ -49,18 +49,23 @@ const Hero = () => {
             />
           </motion.div>
 
-          {/* Profile Image Card */}
-          <motion.div
+          {/* Profile Image Card - clic ouvre le PDF guideline */}
+          <motion.a
+            href="/guideline/guideline-erlow-ethan.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="col-span-6 md:col-span-4 row-span-2 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl p-6 relative overflow-hidden group"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="col-span-6 md:col-span-4 row-span-2 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl p-6 relative overflow-hidden group cursor-pointer block"
           >
             <div className="w-full h-full flex items-center justify-center">
               <div className="text-8xl transition-transform duration-300 group-hover:scale-110">👨‍💻</div>
             </div>
             <div className="absolute bottom-4 left-4 text-white font-bold">Ethan Ehrler</div>
-          </motion.div>
+          </motion.a>
 
           {/* Stats Card */}
           <motion.div
