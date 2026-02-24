@@ -1,0 +1,153 @@
+{
+  "Navigation": {
+    "home": "Accueil",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projets",
+    "journey": "Parcours",
+    "contact": "Contact",
+    "closeMenu": "Fermer le menu",
+    "openMenu": "Ouvrir le menu"
+  },
+  "Hero": {
+    "brand": "Erlow",
+    "title1": "Designer",
+    "title2": "& Développeur",
+    "intro": "Développeur web passionné par le design et l'expérience utilisateur. J'aime créer des interfaces modernes, fluides et esthétiques. J'apporte une touche unique à chaque projet 🚀",
+    "projectsCount": "Projets réalisés",
+    "techStack": "Stack Technique",
+    "contact": "Contact",
+    "moreNetworks": "Plus de réseaux",
+    "seeProjects": "Voir mes projets →",
+    "guidelineDA": "Guideline Direction Artistique (PDF)"
+  },
+  "About": {
+    "title": "À Propos de Moi",
+    "subtitle": "Passionné par la création de projets innovants et de qualité",
+    "development": "Développement",
+    "developmentDesc": "React, Next.js, TypeScript, Vue.js, Angular, Python",
+    "design": "Design",
+    "designDesc": "UI/UX, Figma, Adobe Creative Suite",
+    "performance": "Performance",
+    "performanceDesc": "Optimisation, SEO, Accessibilité",
+    "collaboration": "Collaboration",
+    "collaborationDesc": "Agile, Git, Communication"
+  },
+  "Skills": {
+    "title": "Technologies & Outils",
+    "subtitle": "Une sélection des technologies avec lesquelles je travaille au quotidien"
+  },
+  "Projects": {
+    "title": "Projets Sélectionnés",
+    "subtitle": "Une collection de projets variés et innovants",
+    "seeDetails": "Voir les détails",
+    "viewAll": "Voir tous les projets",
+    "rocketDecals": {
+      "description": "Site web et communauté Discord pour commander et télécharger des stickers personnalisés pour Rocket League",
+      "fullDescription": "Rocket Decals est un projet alliant site web et communauté Discord, permettant aux joueurs de Rocket League de commander et télécharger leurs propres stickers personnalisés, directement utilisables via BakkesMod et AlphaConsole. Le projet est réalisé avec un ami artiste : je m'occupe principalement du développement du site, ainsi que de la communication et de la démarche partenariale. Nous collaborons régulièrement avec des créateurs de contenu et influenceurs totalisant plusieurs centaines de milliers d'abonnés, afin de proposer des designs uniques et renforcer la visibilité de la communauté."
+    },
+    "fluxParticulaire": {
+      "description": "Site web pour visualiser des flux de particules entre plusieurs fenêtres de navigateur en temps réel",
+      "fullDescription": "Flux Particulaires est un site web permettant de visualiser des flux de particules entre plusieurs fenêtres de navigateur en temps réel."
+    },
+    "erlos": {
+      "description": "Gestionnaire de raccourcis imitant l'interface d'un OS",
+      "fullDescription": "ErlOS est un gestionnaire de raccourcis imitant l'interface d'un OS, permettant de créer, modifier et supprimer des raccourcis. Il permet également de créer des graphiques, jouer au démineur, contient divers outils de personnalisation et plus encore."
+    },
+    "erplain": {
+      "description": "Solution de gestion tout-en-un",
+      "fullDescription": "Erplain est une solution de gestion tout-en-un conçue pour les petites et moyennes entreprises : elle centralise les ventes B2B, la gestion des stocks, les achats, les devis, bons de commande et factures. Elle permet un suivi en temps réel des niveaux de stock, automatise les réassorts et s'intègre avec des plateformes comme Shopify, QuickBooks Online ou Stripe."
+    },
+    "supervision": {
+      "description": "Application de supervision dans la maintenance prédictive",
+      "fullDescription": "Dans le cadre de mon alternance au sein de Sercel, j'ai eu l'occasion de travailler sur le projet Supervision. Les structures comme les éoliennes ou les ponts sont des structures très coûteuses qui finissent par se fragiliser, c'est pourquoi il est important de s'assurer de leur bonne intégrité. La solution de monitoring de Sercel offre la possibilité d'estimer la durée de vie d'une structure et de voir de nombreuses informations sur celle-ci. Cela est possible grâce à la solution de capteurs câblés en série (S-Morpho), de calcul de monitoring et de l'application de Supervision permettant de consulter de nombreux indicateurs sous forme de tableaux de bord."
+    },
+    "lomet": {
+      "description": "Modélisateur de méthodologie de travail",
+      "fullDescription": "LOMET est un modélisateur de méthodologie de travail permettant de représenter graphiquement celle-ci. Projet réalisé dans le cadre de mon stage au LIG."
+    },
+    "erlinks": {
+      "description": "Site de gestion de liens personnels",
+      "fullDescription": "Erlinks est un site de gestion de liens personnels inspiré de Linktree."
+    },
+    "intemporal": {
+      "description": "Site de vente aux enchères de montres",
+      "fullDescription": "Dans le cadre de ma formation à l'IUT 2 de Grenoble, j'ai eu l'occasion de travailler sur le projet Intemporal. Ce projet était un site de vente aux enchères de montres, permettant de vendre et d'acheter des montres. Nous avons obtenu un prix du jury de l'IUT Informatique de Grenoble pour la qualité de notre prototype."
+    },
+    "team": {
+      "solo": "Solo",
+      "people2": "2 personnes",
+      "people6": "6 personnes",
+      "people8": "8 personnes"
+    }
+  },
+  "ProjectModal": {
+    "year": "Année",
+    "team": "Équipe",
+    "aboutProject": "À propos du projet",
+    "preview": "Aperçu",
+    "viewDemo": "Voir la démo",
+    "viewCode": "Voir le code",
+    "videoNotSupported": "Votre navigateur ne supporte pas les vidéos."
+  },
+  "Experience": {
+    "title": "Mon Parcours",
+    "vacation": {
+      "year": "Fév. - Mars 2026",
+      "title": "Cours de vacation",
+      "company": "IUT 2 de Grenoble",
+      "description": "Enseignement en parallèle de mon poste actuel chez Erplain."
+    },
+    "erplain": {
+      "year": "Oct. 2024 - présent",
+      "title": "Développeur web",
+      "company": "Erplain",
+      "description": "Développement de l'application Erplain"
+    },
+    "sercel": {
+      "year": "Sept. 2023 - Août 2024",
+      "title": "Alternance développeur web",
+      "company": "Sercel",
+      "description": "Développement de l'application de supervision dans la maintenance prédictive"
+    },
+    "lig": {
+      "year": "Avr. - Juin 2023",
+      "title": "Stage développeur web",
+      "company": "LIG",
+      "description": "Extension de l'outil LOMET en support à l'ingénierie des méthodes"
+    },
+    "iut": {
+      "year": "Sept. 2021 - Juil. 2024",
+      "title": "BUT Informatique",
+      "company": "IUT 2 de Grenoble",
+      "description": "Formation en informatique"
+    }
+  },
+  "Contact": {
+    "title": "Travaillons Ensemble",
+    "subtitle": "Discutons autour d'un café ☕",
+    "stayInTouch": "Restons en contact 🤙",
+    "stayInTouchDesc": "Que ce soit pour un projet, une question ou simplement pour discuter !",
+    "phone": "Téléphone",
+    "location": "Localisation",
+    "locationValue": "Grenoble, France",
+    "socialNetworks": "Réseaux Sociaux",
+    "moreNetworks": "Plus de réseaux",
+    "sendMessage": "Envoyez-moi un message 📨",
+    "name": "Nom",
+    "namePlaceholder": "Votre nom",
+    "email": "Email",
+    "emailPlaceholder": "votre@email.com",
+    "subject": "Sujet",
+    "subjectPlaceholder": "Sujet de votre message",
+    "message": "Message",
+    "messagePlaceholder": "Parlez-moi de votre projet...",
+    "submit": "Envoyer le message",
+    "footer": "© Portfolio conçu et développé par"
+  },
+  "Layout": {
+    "title": "Ethan Ehrler | Web Designer & Développeur",
+    "description": "Portfolio de Ethan Ehrler, web designer et développeur",
+    "keywords": "web design, portfolio, développeur, designer, créatif"
+  }
+}

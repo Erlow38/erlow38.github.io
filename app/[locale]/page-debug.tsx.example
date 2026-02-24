@@ -1,0 +1,13 @@
+// Rename to page.tsx to test: keep only one component at a time to find which causes the error.
+// If the page works with only one component, add the others back one by one.
+
+import Navigation from '@/components/Navigation'
+
+export default function HomePage() {
+  return (
+    <main className="min-h-screen">
+      <Navigation />
+      {/* Hero, About, etc. - add back one by one */}
+    </main>
+  )
+}

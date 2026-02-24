@@ -3,59 +3,23 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import React from 'react'
+import { useTranslations } from 'next-intl'
 
 const ExperienceTimeline = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const t = useTranslations('Experience')
 
-  const experiences = [
-    {
-      year: 'Fév. - Mars 2026',
-      title: 'Cours de vacation',
-      company: 'IUT 2 de Grenoble',
-      description: 'Enseignement en parallèle de mon poste actuel chez Erplain.',
-      icon: '👨‍🏫',
-      color: 'from-amber-500 to-orange-500',
-      type: 'education',
-    },
-    {
-      year: 'Oct. 2024 - présent',
-      title: 'Développeur web',
-      company: 'Erplain',
-      description: 'Développement de l\'application Erplain',
-      icon: '💼',
-      color: 'from-orange-500 to-red-600',
-      type: 'work',
-    },
-    {
-      year: 'Sept. 2023 - Août 2024',
-      title: 'Alternance développeur web',
-      company: 'Sercel',
-      description: 'Développement de l\'application de supervision dans la maintenance prédictive',
-      icon: '🏆',
-      color: 'from-blue-500 to-cyan-500',
-      type: 'award',
-    },
-    {
-      year: 'Avr. - Juin 2023',
-      title: 'Stage développeur web',
-      company: 'LIG',
-      description: "Extension de l'outil LOMET en support à l'ingénierie des méthodes",
-      icon: '🔧',
-      color: 'from-purple-500 to-pink-500',
-      type: 'work',
-    },
-    {
-      year: 'Sept. 2021 - Juil. 2024',
-      title: 'BUT Informatique',
-      company: 'IUT 2 de Grenoble',
-      description: 'Formation en informatique',
-      icon: '🎓',
-      color: 'from-green-500 to-emerald-600',
-      type: 'education',
-    },
-  ]
+  const experienceKeys = ['vacation', 'erplain', 'sercel', 'lig', 'iut'] as const
+
+  const experiences = experienceKeys.map((key) => ({
+    year: t(`${key}.year`),
+    title: t(`${key}.title`),
+    company: t(`${key}.company`),
+    description: t(`${key}.description`),
+    icon: key === 'vacation' ? '👨‍🏫' : key === 'erplain' ? '💼' : key === 'sercel' ? '🏆' : key === 'lig' ? '🔧' : '🎓',
+    color: key === 'vacation' ? 'from-amber-500 to-orange-500' : key === 'erplain' ? 'from-orange-500 to-red-600' : key === 'sercel' ? 'from-blue-500 to-cyan-500' : key === 'lig' ? 'from-purple-500 to-pink-500' : 'from-green-500 to-emerald-600',
+  }))
 
   return (
     <section id="parcours" className="py-20 md:py-32 relative overflow-hidden">
@@ -77,14 +41,12 @@ const ExperienceTimeline = () => {
           </motion.div>
           <h2 className="text-4xl md:text-6xl font-black mb-4">
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Mon Parcours
+              {t('title')}
             </span>
           </h2>
         </motion.div>
 
-        {/* Timeline */}
         <div className="max-w-5xl mx-auto relative">
-          {/* Vertical line */}
           <div className="absolute left-[22px] md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 via-pink-500 to-orange-500 md:-translate-x-1/2" />
 
           <div className="space-y-8 md:space-y-16">
@@ -98,7 +60,6 @@ const ExperienceTimeline = () => {
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                 } flex-row`}
               >
-                {/* Timeline dot */}
                 <motion.div
                   initial={{ scale: 0 }}
                   animate={isInView ? { scale: 1 } : {}}
@@ -108,12 +69,10 @@ const ExperienceTimeline = () => {
                   {exp.icon}
                 </motion.div>
 
-                {/* Content card */}
                 <div className={`w-full md:w-5/12 ml-20 md:ml-0 ${index % 2 === 0 ? 'md:mr-auto md:pr-12' : 'md:ml-auto md:pl-12'}`}>
                   <div
                     className="glass-effect rounded-3xl p-6 md:p-8 border-2 border-purple-500/30 hover:border-purple-500/50 relative overflow-visible group transition-all duration-300 hover:shadow-purple-500/20"
                   >
-                    {/* Year badge */}
                     <div className={`absolute -top-3 -right-3 px-4 py-2 bg-gradient-to-r ${exp.color} rounded-full text-white font-black text-sm shadow-lg z-20`}>
                       {exp.year}
                     </div>
@@ -124,7 +83,6 @@ const ExperienceTimeline = () => {
                       <p className="text-gray-400 text-sm md:text-base">{exp.description}</p>
                     </div>
 
-                    {/* Glow effect */}
                     <div className={`absolute inset-0 rounded-3xl bg-gradient-to-r ${exp.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                   </div>
                 </div>
@@ -138,4 +96,3 @@ const ExperienceTimeline = () => {
 }
 
 export default ExperienceTimeline
-

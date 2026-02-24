@@ -1,25 +1,19 @@
 'use client'
 
-import Hero from '@/components/Hero'
-import About from '@/components/About'
-import Contact from '@/components/Contact'
-import Navigation from '@/components/Navigation'
-import InteractiveSkills from '@/components/InteractiveSkills'
-import BentoProjects from '@/components/BentoProjects'
-import ExperienceTimeline from '@/components/ExperienceTimeline'
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 
-export default function Home() {
+export default function RootPage() {
+  const router = useRouter()
+  useEffect(() => {
+    const preferred = typeof navigator !== 'undefined' && navigator.language?.startsWith('en')
+      ? 'en'
+      : 'fr'
+    router.replace(`/${preferred}`)
+  }, [router])
   return (
-    <main className="min-h-screen">
-      {/* <CustomCursor /> */}
-      <Navigation />
-      <Hero />
-      <About />
-      <InteractiveSkills />
-      <BentoProjects />
-      <ExperienceTimeline />
-      <Contact />
+    <main className="min-h-screen flex items-center justify-center">
+      <p className="text-gray-400">Chargement…</p>
     </main>
   )
 }
-

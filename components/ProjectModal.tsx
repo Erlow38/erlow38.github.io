@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Github, ExternalLink, Calendar, Users, ZoomIn } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 interface ProjectModalProps {
   isOpen: boolean
@@ -24,8 +25,8 @@ interface ProjectModalProps {
 
 const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null)
+  const t = useTranslations('ProjectModal')
 
-  // Prevent scroll when modal is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
@@ -37,7 +38,6 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
     }
   }, [isOpen])
 
-  // Close on escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -58,7 +58,6 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -67,7 +66,6 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
             className="fixed inset-0 bg-black/80 backdrop-blur-md z-[100]"
           />
 
-          {/* Modal */}
           <div className="fixed inset-0 z-[101] overflow-y-auto overscroll-contain">
             <div className="min-h-screen px-4 py-8 flex items-center justify-center">
               <motion.div
@@ -79,12 +77,10 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                 className="relative w-full max-w-4xl"
               >
               <div className={`glass-effect rounded-3xl border-2 border-white/20 shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto`}>
-                {/* Header with gradient */}
                 <div className={`bg-gradient-to-br ${project.color} p-8 md:p-12 relative overflow-hidden`}>
                   <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIxLTEuNzktNC00LTRzLTQgMS43OS00IDQgMS43OSA0IDQgNCA0LTEuNzkgNC00em0wLTEwYzAtMi4yMS0xLjc5LTQtNC00cy00IDEuNzktNCA0IDEuNzkgNCA0IDQgNC0xLjc5IDQtNHoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-20" />
                   
                   <div className="relative">
-                    {/* Close button */}
                     <motion.button
                       onClick={onClose}
                       whileHover={{ scale: 1.1, rotate: 90 }}
@@ -121,9 +117,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                   </div>
                 </div>
 
-                {/* Content */}
                 <div className="p-8 md:p-12 bg-black/40 backdrop-blur-xl">
-                  {/* Project details */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                     {project.year && (
                       <div className="flex items-center gap-3">
@@ -131,7 +125,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                           <Calendar className="text-purple-400" size={24} />
                         </div>
                         <div>
-                          <p className="text-xs text-gray-400 uppercase tracking-wide">Année</p>
+                          <p className="text-xs text-gray-400 uppercase tracking-wide">{t('year')}</p>
                           <p className="text-white font-semibold">{project.year}</p>
                         </div>
                       </div>
@@ -142,27 +136,25 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                           <Users className="text-pink-400" size={24} />
                         </div>
                         <div>
-                          <p className="text-xs text-gray-400 uppercase tracking-wide">Équipe</p>
+                          <p className="text-xs text-gray-400 uppercase tracking-wide">{t('team')}</p>
                           <p className="text-white font-semibold">{project.team}</p>
                         </div>
                       </div>
                     )}
                   </div>
 
-                  {/* Full description */}
                   {project.fullDescription && (
                     <div className="mb-8">
-                      <h3 className="text-2xl font-black text-white mb-4">À propos du projet</h3>
+                      <h3 className="text-2xl font-black text-white mb-4">{t('aboutProject')}</h3>
                       <p className="text-gray-300 leading-relaxed">
                         {project.fullDescription}
                       </p>
                     </div>
                   )}
 
-                  {/* Media Gallery (Images & Videos) */}
                   {project.images && project.images.length > 0 && (
                     <div className="mb-8">
-                      <h3 className="text-2xl font-black text-white mb-4">Aperçu</h3>
+                      <h3 className="text-2xl font-black text-white mb-4">{t('preview')}</h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {project.images.map((media, idx) => {
                           const isVideo = media.match(/\.(mp4|webm|mov)$/i)
@@ -186,7 +178,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                                   preload="auto"
                                   onClick={(e) => e.stopPropagation()}
                                 >
-                                  Votre navigateur ne supporte pas les vidéos.
+                                  {t('videoNotSupported')}
                                 </video>
                               ) : (
                                 <>
@@ -195,7 +187,6 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                                     alt={`${project.title} - ${idx + 1}`}
                                     className="w-full h-full object-cover"
                                   />
-                                  {/* Zoom overlay */}
                                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                     <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full">
                                       <ZoomIn className="text-white" size={24} />
@@ -210,7 +201,6 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                     </div>
                   )}
 
-                  {/* Action buttons */}
                   <div className="flex flex-wrap gap-4">
                     {project.demoUrl && (
                       <motion.a
@@ -222,7 +212,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                         className="flex-1 min-w-[200px] px-6 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 rounded-2xl text-white font-black hover:shadow-lg hover:shadow-purple-500/50 transition-all flex items-center justify-center gap-3"
                       >
                         <ExternalLink size={20} />
-                        <span>Voir la démo</span>
+                        <span>{t('viewDemo')}</span>
                       </motion.a>
                     )}
                     {project.githubUrl && (
@@ -235,7 +225,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                         className="flex-1 min-w-[200px] px-6 py-4 glass-effect border-2 border-white/20 rounded-2xl text-white font-bold hover:border-purple-500/50 transition-all flex items-center justify-center gap-3"
                       >
                         <Github size={20} />
-                        <span>Voir le code</span>
+                        <span>{t('viewCode')}</span>
                       </motion.a>
                     )}
                   </div>
@@ -245,11 +235,9 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
             </div>
           </div>
 
-          {/* Lightbox for full-size images */}
           <AnimatePresence>
             {lightboxImage && (
               <>
-                {/* Lightbox backdrop */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -257,7 +245,6 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                   onClick={() => setLightboxImage(null)}
                   className="fixed inset-0 bg-black/95 backdrop-blur-lg z-[200] flex items-center justify-center p-4"
                 >
-                  {/* Close button */}
                   <motion.button
                     onClick={(e) => {
                       e.stopPropagation()
@@ -270,7 +257,6 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                     <X size={24} />
                   </motion.button>
 
-                  {/* Full-size image */}
                   <motion.img
                     src={lightboxImage}
                     alt="Full size preview"
@@ -292,4 +278,3 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
 }
 
 export default ProjectModal
-

@@ -4,37 +4,39 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Code, Palette, Rocket, Users } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 const About = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const t = useTranslations('About')
 
   const skills = [
     {
       icon: <Code size={32} />,
-      title: 'Développement',
-      description: 'React, Next.js, TypeScript, Vue.js, Angular, Python',
+      titleKey: 'development' as const,
+      descKey: 'developmentDesc' as const,
       emoji: '💻',
       color: 'from-purple-500 to-pink-500',
     },
     {
       icon: <Palette size={32} />,
-      title: 'Design',
-      description: 'UI/UX, Figma, Adobe Creative Suite',
+      titleKey: 'design' as const,
+      descKey: 'designDesc' as const,
       emoji: '🎨',
       color: 'from-blue-500 to-cyan-500',
     },
     {
       icon: <Rocket size={32} />,
-      title: 'Performance',
-      description: 'Optimisation, SEO, Accessibilité',
+      titleKey: 'performance' as const,
+      descKey: 'performanceDesc' as const,
       emoji: '⚡',
       color: 'from-orange-500 to-red-500',
     },
     {
       icon: <Users size={32} />,
-      title: 'Collaboration',
-      description: 'Agile, Git, Communication',
+      titleKey: 'collaboration' as const,
+      descKey: 'collaborationDesc' as const,
       emoji: '🤝',
       color: 'from-green-500 to-emerald-500',
     },
@@ -60,18 +62,18 @@ const About = () => {
           </motion.div>
           <h2 className="text-4xl md:text-6xl font-black mb-4">
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">
-              À Propos de Moi
+              {t('title')}
             </span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
-            Passionné par la création de projets innovants et de qualité
+            {t('subtitle')}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
           {skills.map((skill, index) => (
             <motion.div
-              key={skill.title}
+              key={skill.titleKey}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ 
@@ -89,10 +91,10 @@ const About = () => {
                   {skill.emoji}
                 </div>
                 <h3 className="text-xl font-black text-white mb-2">
-                  {skill.title}
+                  {t(skill.titleKey)}
                 </h3>
                 <p className="text-gray-400 text-sm">
-                  {skill.description}
+                  {t(skill.descKey)}
                 </p>
               </div>
             </motion.div>
@@ -104,4 +106,3 @@ const About = () => {
 }
 
 export default About
-

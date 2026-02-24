@@ -3,18 +3,30 @@
 import { motion } from 'framer-motion'
 import { Menu, X, Home, User, Briefcase, Code, Mail, GraduationCap } from 'lucide-react'
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
+import { useRouter, usePathname } from 'next/navigation'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const t = useTranslations('Navigation')
+  const router = useRouter()
+  const pathname = usePathname()
+  const currentLocale = pathname?.startsWith('/en') ? 'en' : 'fr'
+  const otherLocale = currentLocale === 'fr' ? 'en' : 'fr'
 
   const navItems = [
-    { name: 'Accueil', href: '#hero', icon: Home },
-    { name: 'About', href: '#about', icon: User },
-    { name: 'Skills', href: '#skills', icon: Code },
-    { name: 'Projets', href: '#projects', icon: Briefcase },
-    { name: 'Parcours', href: '#parcours', icon: GraduationCap },
-    { name: 'Contact', href: '#contact', icon: Mail },
+    { name: t('home'), href: '#hero', icon: Home },
+    { name: t('about'), href: '#about', icon: User },
+    { name: t('skills'), href: '#skills', icon: Code },
+    { name: t('projects'), href: '#projects', icon: Briefcase },
+    { name: t('journey'), href: '#parcours', icon: GraduationCap },
+    { name: t('contact'), href: '#contact', icon: Mail },
   ]
+
+  const switchLocale = (locale: 'fr' | 'en') => {
+    router.replace(`/${locale}`)
+    setIsOpen(false)
+  }
 
   return (
     <motion.nav
@@ -58,6 +70,15 @@ const Navigation = () => {
                 </motion.a>
               )
             })}
+            {/* Language switcher - only show button to switch to the other language */}
+            <span className="text-gray-500 mx-1">|</span>
+            <button
+              onClick={() => switchLocale(otherLocale)}
+              className="px-2.5 py-1.5 rounded-full text-sm font-medium transition-all hover:bg-white/10 text-gray-300 hover:text-white"
+              aria-label={otherLocale === 'en' ? 'English' : 'Français'}
+            >
+              {otherLocale.toUpperCase()}
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -65,7 +86,7 @@ const Navigation = () => {
             onClick={() => setIsOpen(!isOpen)}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-label={isOpen ? t('closeMenu') : t('openMenu')}
             aria-expanded={isOpen}
             className="lg:hidden text-white w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center flex-shrink-0"
           >
@@ -103,6 +124,15 @@ const Navigation = () => {
                 </motion.a>
               )
             })}
+            <div className="mt-3 pt-3 border-t border-white/10">
+              <button
+                onClick={() => switchLocale(otherLocale)}
+                className="w-full py-2.5 rounded-xl text-sm font-medium bg-white/10 text-white"
+                aria-label={otherLocale === 'en' ? 'English' : 'Français'}
+              >
+                {otherLocale === 'en' ? 'English' : 'Français'}
+              </button>
+            </div>
           </motion.div>
         </div>
       )}

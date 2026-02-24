@@ -3,9 +3,11 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, Sparkles, Zap, Code2, MoreHorizontal } from 'lucide-react'
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 const Hero = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null)
+  const t = useTranslations('Hero')
 
   return (
     <section id="hero" className="min-h-screen relative overflow-hidden pt-32 pb-10 flex items-center">
@@ -30,14 +32,14 @@ const Hero = () => {
             <div className="relative z-10">
               <div className="flex items-center gap-2 mb-3 md:mb-4">
                 <Sparkles className="text-white/80" size={18} />
-                <span className="text-white/80 font-mono text-xs md:text-sm">Erlow</span>
+                <span className="text-white/80 font-mono text-xs md:text-sm">{t('brand')}</span>
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-white mb-3 md:mb-4 leading-tight">
-                Designer<br />
-                <span className="text-black/40">& Développeur</span>
+                {t('title1')}<br />
+                <span className="text-black/40">{t('title2')}</span>
               </h1>
               <p className="text-white/90 text-sm md:text-base lg:text-lg max-w-xl">
-              Développeur web passionné par le design et l’expérience utilisateur. J’aime créer des interfaces modernes, fluides et esthétiques. J’apporte une touche unique à chaque projet 🚀
+                {t('intro')}
               </p>
             </div>
 
@@ -49,7 +51,7 @@ const Hero = () => {
             />
           </motion.div>
 
-          {/* Profile Image Card - clic ouvre le PDF guideline */}
+          {/* Profile Image Card - clic ouvre le PDF guideline DA */}
           <motion.a
             href="/guideline/guideline-erlow-ethan.pdf"
             target="_blank"
@@ -60,11 +62,15 @@ const Hero = () => {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="col-span-6 md:col-span-4 row-span-2 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl p-6 relative overflow-hidden group cursor-pointer block"
+            aria-label={t('guidelineDA')}
           >
-            <div className="w-full h-full flex items-center justify-center">
-              <div className="text-8xl transition-transform duration-300 group-hover:scale-110">👨‍💻</div>
+            <div className="w-full h-full flex flex-col items-center justify-center pt-2 pb-14 md:pb-16 md:pt-0">
+              <div className="text-7xl sm:text-8xl md:text-8xl transition-transform duration-300 group-hover:scale-110 flex-shrink-0">👨‍💻</div>
             </div>
-            <div className="absolute bottom-4 left-4 text-white font-bold">Ethan Ehrler</div>
+            <div className="absolute bottom-4 left-4 right-4 text-white min-w-0">
+              <div className="font-bold text-sm md:text-base truncate">Ethan Ehrler</div>
+              <div className="text-[10px] sm:text-xs md:text-sm text-white/90 mt-0.5 line-clamp-2 break-words leading-tight">{t('guidelineDA')}</div>
+            </div>
           </motion.a>
 
           {/* Stats Card */}
@@ -77,7 +83,7 @@ const Hero = () => {
             <div className="flex flex-col md:flex-row items-center justify-between h-full">
               <div>
                 <div className="text-3xl md:text-3xl font-black text-white">30+</div>
-                <div className="text-sm text-gray-400">Projets réalisés</div>
+                <div className="text-sm text-gray-400">{t('projectsCount')}</div>
               </div>
               <Code2 className="text-purple-500 mt-4 md:mt-0" size={32} />
             </div>
@@ -94,7 +100,7 @@ const Hero = () => {
           >
             <div className="text-white font-bold mb-4 flex items-center gap-2 text-base">
               <Zap className="text-orange-500" size={20} />
-              Stack Technique
+              {t('techStack')}
             </div>
             <div className="flex flex-wrap gap-2">
               {['React', 'Next.js', 'TypeScript', 'Vue.js', 'Angular', 'Python', 'Figma'].map((skill, i) => (
@@ -125,7 +131,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.25 }}
             className="col-span-12 md:col-span-3 row-span-3 md:row-span-2 glass-effect rounded-3xl p-6 relative overflow-hidden border-2 border-pink-500/30"
           >
-            <div className="text-white font-bold mb-4 text-lg">Contact</div>
+            <div className="text-white font-bold mb-4 text-lg">{t('contact')}</div>
             <div className="space-y-3 md:space-y-3">
               <a
                 href="https://github.com/Erlow38"
@@ -167,7 +173,7 @@ const Hero = () => {
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <MoreHorizontal size={20} />
                 </div>
-                <span className="font-medium">Plus de réseaux</span>
+                <span className="font-medium">{t('moreNetworks')}</span>
               </a>
             </div>
           </motion.div>
@@ -183,7 +189,7 @@ const Hero = () => {
             className="col-span-12 md:col-span-4 row-span-1 bg-gradient-to-r from-green-500 to-emerald-600 rounded-3xl p-6 relative overflow-hidden group cursor-pointer"
           >
             <div className="flex items-center justify-between">
-              <span className="text-white font-bold text-lg">Voir mes projets →</span>
+              <span className="text-white font-bold text-lg">{t('seeProjects')}</span>
               <span className="text-2xl">✨</span>
             </div>
           </motion.a>
@@ -195,4 +201,3 @@ const Hero = () => {
 }
 
 export default Hero
-

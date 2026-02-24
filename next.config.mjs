@@ -1,13 +1,13 @@
+import createNextIntlPlugin from 'next-intl/plugin'
+
+const withNextIntl = createNextIntlPlugin('./i18n/request.ts')
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
   },
-  // Pas besoin de basePath avec domaine personnalisé
-  // basePath: '',
-  // assetPrefix: '',
 };
 
-export default nextConfig;
-
+export default withNextIntl(nextConfig);

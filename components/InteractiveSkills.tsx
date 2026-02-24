@@ -3,10 +3,12 @@
 import { motion } from 'framer-motion'
 import { useRef } from 'react'
 import { useInView } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 
 const InteractiveSkills = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const t = useTranslations('Skills')
 
   const skills = [
     { name: 'React', color: '#61DAFB', icon: '⚛️' },
@@ -43,11 +45,11 @@ const InteractiveSkills = () => {
           </motion.div>
           <h2 className="text-4xl md:text-6xl font-black mb-4">
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Technologies & Outils
+              {t('title')}
             </span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
-            Une sélection des technologies avec lesquelles je travaille au quotidien
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -71,12 +73,9 @@ const InteractiveSkills = () => {
 
               {/* Content */}
               <div className="relative flex flex-col items-center justify-center gap-2 md:gap-3">
-                {/* Icon */}
                 <div className="text-3xl md:text-4xl transition-transform duration-300 group-hover:scale-110">
                   {skill.icon}
                 </div>
-
-                {/* Skill name */}
                 <h3 
                   className="text-gray-300 font-semibold text-center text-xs md:text-sm transition-colors duration-300 group-hover:text-white"
                 >
@@ -92,4 +91,3 @@ const InteractiveSkills = () => {
 }
 
 export default InteractiveSkills
-

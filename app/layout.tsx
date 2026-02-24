@@ -1,15 +1,9 @@
-import type { Metadata } from 'next'
 import './globals.css'
+import LocaleLang from '@/components/LocaleLang'
 
-export const metadata: Metadata = {
-  title: 'Ethan Ehrler | Web Designer & Développeur',
-  description: 'Portfolio de Ethan Ehrler, web designer et développeur',
-  keywords: 'web design, portfolio, développeur, designer, créatif',
-  icons: {
-    icon: '/images/logo.png',
-    shortcut: '/images/logo.png',
-    apple: '/images/logo.png',
-  },
+export const metadata = {
+  title: 'Ethan Ehrler | Portfolio',
+  description: 'Portfolio',
 }
 
 export default function RootLayout({
@@ -18,8 +12,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr">
+    <html lang="fr" suppressHydrationWarning>
       <body>
+        <LocaleLang />
         {/* Fixed background orbs */}
         <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px]" />
