@@ -1,5 +1,20 @@
 import './globals.css'
+import { Inter, Instrument_Serif } from 'next/font/google'
 import LocaleLang from '@/components/LocaleLang'
+
+const sans = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+})
+
+const serif = Instrument_Serif({
+  subsets: ['latin'],
+  weight: '400',
+  style: ['normal', 'italic'],
+  variable: '--font-serif',
+  display: 'swap',
+})
 
 export const metadata = {
   title: 'Ethan Ehrler | Portfolio',
@@ -12,22 +27,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" suppressHydrationWarning>
-      <body>
+    <html lang="fr" suppressHydrationWarning className={`${sans.variable} ${serif.variable}`}>
+      <body className="font-sans antialiased">
         <LocaleLang />
-        {/* Fixed background orbs */}
-        <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px]" />
-          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-pink-500/10 rounded-full blur-[120px]" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px]" />
-        </div>
-        
-        {/* Content */}
-        <div className="relative z-10">
-          {children}
-        </div>
+        {children}
       </body>
     </html>
   )
 }
-

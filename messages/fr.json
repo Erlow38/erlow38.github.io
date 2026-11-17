@@ -13,13 +13,12 @@
     "brand": "Erlow",
     "title1": "Designer",
     "title2": "& Développeur",
-    "intro": "Développeur web passionné par le design et l'expérience utilisateur. J'aime créer des interfaces modernes, fluides et esthétiques. J'apporte une touche unique à chaque projet 🚀",
-    "projectsCount": "Projets réalisés",
+    "intro": "Développeur web passionné par le design et l'expérience utilisateur. J'aime créer des interfaces claires, fluides et soignées.",
+    "experienceYears": "{count, plural, one {An d'expérience} other {Années d'expérience}}",
     "techStack": "Stack Technique",
     "contact": "Contact",
     "moreNetworks": "Plus de réseaux",
-    "seeProjects": "Voir mes projets →",
-    "guidelineDA": "Guideline Direction Artistique (PDF)"
+    "seeProjects": "Voir les projets"
   },
   "About": {
     "title": "À Propos de Moi",
@@ -35,7 +34,10 @@
   },
   "Skills": {
     "title": "Technologies & Outils",
-    "subtitle": "Une sélection des technologies avec lesquelles je travaille au quotidien"
+    "subtitle": "Une sélection des technologies avec lesquelles je travaille au quotidien",
+    "interface": "Interface",
+    "languages": "Langages",
+    "tools": "Outils"
   },
   "Projects": {
     "title": "Projets Sélectionnés",
@@ -92,11 +94,12 @@
   },
   "Experience": {
     "title": "Mon Parcours",
+    "subtitle": "Études, stages et postes, de la formation à aujourd'hui.",
     "vacation": {
-      "year": "Fév. - Mars 2026",
+      "year": "Fév. 2026 - présent",
       "title": "Cours de vacation",
       "company": "IUT 2 de Grenoble",
-      "description": "Enseignement en parallèle de mon poste actuel chez Erplain."
+      "description": "Cours d'Angular, de développement mobile en Java et d'initiation à l'IA dans l'IDE (compréhension des diffs, relecture de code), en parallèle de mon poste chez Erplain."
     },
     "erplain": {
       "year": "Oct. 2024 - présent",
@@ -125,15 +128,15 @@
   },
   "Contact": {
     "title": "Travaillons Ensemble",
-    "subtitle": "Discutons autour d'un café ☕",
-    "stayInTouch": "Restons en contact 🤙",
+    "subtitle": "Un projet, une question, ou une collaboration.",
+    "stayInTouch": "Restons en contact",
     "stayInTouchDesc": "Que ce soit pour un projet, une question ou simplement pour discuter !",
     "phone": "Téléphone",
     "location": "Localisation",
     "locationValue": "Grenoble, France",
     "socialNetworks": "Réseaux Sociaux",
     "moreNetworks": "Plus de réseaux",
-    "sendMessage": "Envoyez-moi un message 📨",
+    "sendMessage": "Envoyer un message",
     "name": "Nom",
     "namePlaceholder": "Votre nom",
     "email": "Email",

@@ -13,13 +13,12 @@
     "brand": "Erlow",
     "title1": "Designer",
     "title2": "& Developer",
-    "intro": "Web developer passionate about design and user experience. I love creating modern, fluid and aesthetic interfaces. I bring a unique touch to every project 🚀",
-    "projectsCount": "Projects completed",
+    "intro": "Web developer focused on design and user experience. I build clear, considered interfaces.",
+    "experienceYears": "{count, plural, one {Year of experience} other {Years of experience}}",
     "techStack": "Tech Stack",
     "contact": "Contact",
     "moreNetworks": "More networks",
-    "seeProjects": "See my projects →",
-    "guidelineDA": "Art Direction Guideline (PDF)"
+    "seeProjects": "View projects"
   },
   "About": {
     "title": "About Me",
@@ -35,7 +34,10 @@
   },
   "Skills": {
     "title": "Technologies & Tools",
-    "subtitle": "A selection of the technologies I work with on a daily basis"
+    "subtitle": "A selection of the technologies I work with on a daily basis",
+    "interface": "Interface",
+    "languages": "Languages",
+    "tools": "Tools"
   },
   "Projects": {
     "title": "Selected Projects",
@@ -92,11 +94,12 @@
   },
   "Experience": {
     "title": "My Journey",
+    "subtitle": "Studies, internships and roles, from training to today.",
     "vacation": {
-      "year": "Feb. - Mar. 2026",
+      "year": "Feb. 2026 - present",
       "title": "Visiting lecturer",
       "company": "IUT 2 Grenoble",
-      "description": "Teaching alongside my current position at Erplain."
+      "description": "Courses in Angular, Java mobile development, and an introduction to AI in the IDE (reading diffs, code review), alongside my role at Erplain."
     },
     "erplain": {
       "year": "Oct. 2024 - present",
@@ -125,15 +128,15 @@
   },
   "Contact": {
     "title": "Let's Work Together",
-    "subtitle": "Let's chat over a coffee ☕",
-    "stayInTouch": "Let's stay in touch 🤙",
+    "subtitle": "A project, a question, or a collaboration.",
+    "stayInTouch": "Get in touch",
     "stayInTouchDesc": "Whether it's for a project, a question or just to chat!",
     "phone": "Phone",
     "location": "Location",
     "locationValue": "Grenoble, France",
     "socialNetworks": "Social Networks",
     "moreNetworks": "More networks",
-    "sendMessage": "Send me a message 📨",
+    "sendMessage": "Send a message",
     "name": "Name",
     "namePlaceholder": "Your name",
     "email": "Email",

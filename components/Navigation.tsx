@@ -1,7 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { Menu, X, Home, User, Briefcase, Code, Mail, GraduationCap } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { useRouter, usePathname } from 'next/navigation'
@@ -15,12 +14,12 @@ const Navigation = () => {
   const otherLocale = currentLocale === 'fr' ? 'en' : 'fr'
 
   const navItems = [
-    { name: t('home'), href: '#hero', icon: Home },
-    { name: t('about'), href: '#about', icon: User },
-    { name: t('skills'), href: '#skills', icon: Code },
-    { name: t('projects'), href: '#projects', icon: Briefcase },
-    { name: t('journey'), href: '#parcours', icon: GraduationCap },
-    { name: t('contact'), href: '#contact', icon: Mail },
+    { name: t('home'), href: '#hero' },
+    { name: t('about'), href: '#about' },
+    { name: t('skills'), href: '#skills' },
+    { name: t('projects'), href: '#projects' },
+    { name: t('journey'), href: '#parcours' },
+    { name: t('contact'), href: '#contact' },
   ]
 
   const switchLocale = (locale: 'fr' | 'en') => {
@@ -29,114 +28,70 @@ const Navigation = () => {
   }
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className="fixed top-8 left-0 right-0 z-50 px-4"
-    >
-      <div className="container mx-auto max-w-6xl">
-        <div className="glass-effect rounded-full border-2 border-white/10 shadow-2xl px-4 md:px-6 py-3 backdrop-blur-xl">
-          <div className="flex items-center justify-between">
-          <motion.a
-            href="#hero"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-2 whitespace-nowrap"
-          >
-            <img 
-              src="/images/logo.png" 
-              alt="Logo" 
-              className="w-8 h-8 md:w-10 md:h-10 object-contain"
-            />
-            <span className="text-lg md:text-xl font-black bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent hidden sm:inline">
-              Ethan Ehrler
-            </span>
-          </motion.a>
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--line)] bg-[var(--background)]">
+      <div className="shell flex h-16 items-center justify-between">
+        <a href="#hero" className="flex items-center gap-3">
+          <img
+            src="/images/logo.png"
+            alt=""
+            className="h-7 w-7 object-contain"
+          />
+          <span className="font-serif text-lg tracking-tight text-[var(--foreground)]">
+            Ethan Ehrler
+          </span>
+        </a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
-            {navItems.map((item) => {
-              const Icon = item.icon
-              return (
-                <motion.a
-                  key={item.name}
-                  href={item.href}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-3 py-2 rounded-full text-gray-300 hover:text-white hover:bg-white/10 transition-all flex items-center gap-2 group"
-                >
-                  <Icon size={16} className="group-hover:rotate-12 transition-transform" />
-                  <span className="text-sm font-medium whitespace-nowrap">{item.name}</span>
-                </motion.a>
-              )
-            })}
-            {/* Language switcher - only show button to switch to the other language */}
-            <span className="text-gray-500 mx-1">|</span>
-            <button
-              onClick={() => switchLocale(otherLocale)}
-              className="px-2.5 py-1.5 rounded-full text-sm font-medium transition-all hover:bg-white/10 text-gray-300 hover:text-white"
-              aria-label={otherLocale === 'en' ? 'English' : 'Français'}
+        <nav className="hidden items-center gap-6 lg:flex">
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="text-sm text-[var(--muted)] transition-colors hover:text-[var(--foreground)]"
             >
-              {otherLocale.toUpperCase()}
-            </button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <motion.button
-            onClick={() => setIsOpen(!isOpen)}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            aria-label={isOpen ? t('closeMenu') : t('openMenu')}
-            aria-expanded={isOpen}
-            className="lg:hidden text-white w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center flex-shrink-0"
+              {item.name}
+            </a>
+          ))}
+          <button
+            onClick={() => switchLocale(otherLocale)}
+            className="text-xs uppercase tracking-[0.16em] text-[var(--muted)] transition-colors hover:text-[var(--foreground)]"
+            aria-label={otherLocale === 'en' ? 'English' : 'Français'}
           >
-            {isOpen ? <X size={20} /> : <Menu size={20} />}
-          </motion.button>
-          </div>
-        </div>
+            {otherLocale}
+          </button>
+        </nav>
+
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? t('closeMenu') : t('openMenu')}
+          aria-expanded={isOpen}
+          className="flex h-10 w-10 items-center justify-center text-[var(--foreground)] lg:hidden"
+        >
+          {isOpen ? <X size={20} /> : <Menu size={20} />}
+        </button>
       </div>
 
-      {/* Mobile Navigation */}
       {isOpen && (
-        <div className="container mx-auto max-w-6xl px-4">
-          <motion.div
-            initial={{ opacity: 0, y: -20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 10, scale: 1 }}
-            exit={{ opacity: 0, y: -20, scale: 0.95 }}
-            className="lg:hidden mt-4 glass-effect rounded-3xl border-2 border-white/10 shadow-2xl p-4 backdrop-blur-xl"
+        <nav className="shell border-t border-[var(--line)] bg-[var(--background)] py-3 lg:hidden">
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={() => setIsOpen(false)}
+              className="block py-3 text-sm text-[var(--foreground)]"
+            >
+              {item.name}
+            </a>
+          ))}
+          <button
+            onClick={() => switchLocale(otherLocale)}
+            className="mt-2 w-full border-t border-[var(--line)] py-3 text-left text-xs uppercase tracking-[0.16em] text-[var(--muted)]"
+            aria-label={otherLocale === 'en' ? 'English' : 'Français'}
           >
-            {navItems.map((item, index) => {
-              const Icon = item.icon
-              return (
-                <motion.a
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                  className="flex items-center gap-3 px-4 py-3 rounded-2xl text-gray-300 hover:text-white hover:bg-white/10 transition-all group"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
-                    <Icon size={20} />
-                  </div>
-                  <span className="font-medium">{item.name}</span>
-                </motion.a>
-              )
-            })}
-            <div className="mt-3 pt-3 border-t border-white/10">
-              <button
-                onClick={() => switchLocale(otherLocale)}
-                className="w-full py-2.5 rounded-xl text-sm font-medium bg-white/10 text-white"
-                aria-label={otherLocale === 'en' ? 'English' : 'Français'}
-              >
-                {otherLocale === 'en' ? 'English' : 'Français'}
-              </button>
-            </div>
-          </motion.div>
-        </div>
+            {otherLocale === 'en' ? 'English' : 'Français'}
+          </button>
+        </nav>
       )}
-    </motion.nav>
+    </header>
   )
 }
 
