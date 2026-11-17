@@ -30,7 +30,7 @@ const Navigation = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--line)] bg-[var(--background)]">
       <div className="shell flex h-16 items-center justify-between">
-        <a href="#hero" className="flex items-center gap-3">
+        <a href="/cv/cv.pdf" download="Ethan-Ehrler-CV.pdf" className="flex items-center gap-3">
           <img
             src="/images/logo.png"
             alt=""

@@ -43,10 +43,19 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="col-span-6 row-span-2 flex flex-col justify-between rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-5 md:col-span-4 md:p-6">
+          <a
+            href="/cv/cv.pdf"
+            download="Ethan-Ehrler-CV.pdf"
+            className="col-span-6 row-span-2 flex flex-col justify-between rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-5 transition-colors hover:border-[var(--accent)] md:col-span-4 md:p-6"
+          >
             <span className="font-serif text-5xl text-[var(--paper)] md:text-6xl">EE</span>
-            <span className="text-sm text-[var(--foreground)]">Ethan Ehrler</span>
-          </div>
+            <span className="min-w-0">
+              <span className="block text-sm text-[var(--foreground)]">Ethan Ehrler</span>
+              <span className="mt-0.5 block text-[10px] leading-tight text-[var(--muted)] sm:text-xs">
+                {t('cv')}
+              </span>
+            </span>
+          </a>
 
           <div className="col-span-6 row-span-2 flex flex-col justify-end rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-5 md:col-span-4 md:row-span-1 md:p-6">
             <p className="font-serif text-4xl leading-none text-[var(--foreground)]" suppressHydrationWarning>
