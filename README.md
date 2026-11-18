@@ -1,295 +1,117 @@
-# ✨ Portfolio - Ethan Ehrler
+# Portfolio — Ethan Ehrler
 
-Un portfolio moderne et audacieux avec design **Bento Grid**, animations fluides et interactions uniques. Créé avec Next.js, TypeScript, Tailwind CSS et Framer Motion.
+Site personnel de designer et développeur web. Une page unique, en français et en anglais, exportée en statique et publiée sur [www.ethan-ehrler.fr](https://www.ethan-ehrler.fr).
 
-![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue?style=for-the-badge&logo=typescript)
-![Tailwind](https://img.shields.io/badge/Tailwind-3.4-cyan?style=for-the-badge&logo=tailwind-css)
+## Stack
 
-## 🎨 Fonctionnalités Uniques
+- Next.js 14 (App Router, export statique)
+- TypeScript
+- Tailwind CSS
+- next-intl (français et anglais)
+- Framer Motion (modale projet)
+- Lucide React
 
-### Design & UX
-- 🎯 **Bento Grid Layout** - Design asymétrique moderne et original
-- 🖱️ **Curseur personnalisé** - Expérience interactive unique
-- 🌈 **Gradients vibrants** - Identité visuelle forte (purple, pink, orange, cyan)
-- 💎 **Glassmorphism** - Effets de verre ultra-modernes
-- ✨ **Animations fluides** - Framer Motion optimisées (pas de lag)
-- 📱 **100% Responsive** - Parfait sur mobile, tablette et desktop
+## Contenu
 
-### Sections
+- Hero, avec liens, CV et accès aux projets
+- Présentation et compétences
+- Grille de projets, avec modale, images et vidéo
+- Parcours
+- Contact par mailto
+- Navigation fixe et menu mobile
 
-#### 🏠 Hero - Bento Grid
-- Carte principale avec gradient animé
-- Carte profil avec votre logo
-- Statistiques (nombre de projets)
-- Preview des technologies
-- Liens de contact rapides
-- Call-to-action vers les projets
+## Installation
 
-#### 👋 À Propos
-- 4 cartes de compétences avec emojis
-- Effets 3D au hover
-- Gradients personnalisés par compétence
-
-#### 🛠️ Technologies & Outils
-- Grid responsive de 12 technologies
-- Icônes/emojis expressifs
-- Effet glow subtil au hover
-
-#### 💼 Projets - Bento Grid Dynamique
-- **Layout asymétrique** avec cartes de tailles variables
-- **Modale détaillée** pour chaque projet
-- **Support images ET vidéos** dans la modale
-- **Lightbox** pour agrandir les images
-- Effet de flou élégant au hover
-- Informations complètes : description, année, équipe, technologies
-
-#### ⏳ Timeline Parcours
-- Timeline verticale avec ligne gradient
-- Icônes parfaitement centrées
-- Badges d'année colorés
-- Disposition alternée (gauche/droite)
-- Animations d'entrée fluides
-
-#### 💌 Contact
-- Formulaire de contact fonctionnel (mailto)
-- Cartes d'informations avec emojis
-- Boutons réseaux sociaux
-- Footer personnalisé
-
-## 🚀 Technologies
-
-- **Next.js 14.2** - Framework React avec App Router
-- **TypeScript 5.4** - Typage statique pour moins d'erreurs
-- **Tailwind CSS 3.4** - Styling utility-first
-- **Framer Motion 11** - Animations et transitions
-- **Lucide React** - Icônes modernes et légères
-
-## 📦 Installation
-
-### Prérequis
-- Node.js 20+ et npm
-
-### Installation
+Node.js 20 ou plus récent.
 
 ```bash
-# Cloner le repository
-git clone https://github.com/Erlow38/next-portfolio.git
-
-# Installer les dépendances
-npm install --legacy-peer-deps
-
-# Lancer le serveur de développement
+git clone https://github.com/Erlow38/erlow38.github.io.git
+cd erlow38.github.io
+npm install
 npm run dev
 ```
 
-Ouvrir [http://localhost:3000](http://localhost:3000) dans votre navigateur.
+Le site est disponible sur [http://localhost:3000](http://localhost:3000). La racine redirige vers `/fr` ou `/en` selon la langue du navigateur.
 
-## 🏗️ Structure du Projet
+## Scripts
 
-```
-next-portfolio/
-├── app/
-│   ├── globals.css           # Styles globaux + animations CSS
-│   ├── layout.tsx             # Layout avec orbes fixes
-│   └── page.tsx               # Page principale
-├── components/
-│   ├── Navigation.tsx         # Navbar flottante moderne
-│   ├── CustomCursor.tsx       # Curseur personnalisé
-│   ├── Hero.tsx               # Hero avec Bento Grid
-│   ├── About.tsx              # Compétences principales
-│   ├── InteractiveSkills.tsx  # Technologies & outils
-│   ├── BentoProjects.tsx      # Grille de projets asymétrique
-│   ├── ProjectModal.tsx       # Modale détaillée avec lightbox
-│   ├── ExperienceTimeline.tsx # Timeline du parcours
-│   └── Contact.tsx            # Formulaire de contact
-├── public/
-│   ├── images/
-│   │   └── logo.png           # Votre logo (favicon + navbar)
-│   └── projects/              # Images et vidéos de vos projets
-│       ├── projet1/
-│       │   ├── 1.png
-│       │   └── 2.mp4
-│       └── projet2/
-│           └── 1.png
-└── package.json
+```bash
+npm run dev      # développement
+npm run build    # export statique dans out/
+npm run lint     # ESLint
+npm run deploy   # build, puis publication sur la branche gh-pages
 ```
 
-## 🎨 Personnalisation
+`npm run deploy` utilise des commandes Windows (`copy`, `echo`).
 
-### 1. Informations Personnelles
+## Structure
 
-**Hero Section** (`components/Hero.tsx`)
-- Ligne 68 : Votre nom dans la carte profil
-- Ligne 80 : Nombre de projets réalisés
+```
+app/
+  layout.tsx                 # polices et métadonnées
+  page.tsx                   # redirection vers la langue
+  [locale]/page.tsx          # page d'accueil
+  globals.css
+components/                  # sections de la page
+i18n/                        # configuration next-intl
+messages/
+  fr.json
+  en.json
+middleware.ts
+public/
+  CNAME
+  cv/
+  images/
+  projects/
+```
 
-**Navigation** (`components/Navigation.tsx`)
-- Ligne 38-39 : Votre nom dans la navbar
+## Modifier le contenu
 
-### 2. Ajouter Vos Projets
+Les textes visibles sont dans `messages/fr.json` et `messages/en.json`. Les deux fichiers doivent rester alignés.
 
-**Fichier** : `components/BentoProjects.tsx` (lignes 15-98)
+| Contenu | Fichier |
+| --- | --- |
+| Textes des sections | `messages/fr.json`, `messages/en.json` |
+| Projets (tags, médias, liens, année) | `components/BentoProjects.tsx` |
+| Compétences | `components/InteractiveSkills.tsx` |
+| Entrées du parcours | `components/ExperienceTimeline.tsx` |
+
+Médias des projets : `public/projects/<slug>/`. Les images servent de couverture ; un `.mp4` peut être ajouté dans la modale.
+
+Exemple d'entrée dans `projectsData` :
 
 ```typescript
 {
-  title: 'Nom du Projet',
-  description: 'Description courte',
-  emoji: '🚀', // Emoji représentatif
-  color: 'from-purple-500 to-pink-500', // Gradient
-  tags: ['Next.js', 'TypeScript', 'MongoDB'],
-  size: 'large', // 'large', 'medium', ou 'small'
-  fullDescription: 'Description longue et détaillée pour la modale...',
-  images: ['/projects/mon-projet/1.png', '/projects/mon-projet/2.mp4'],
-  demoUrl: 'https://demo.com',
-  githubUrl: 'https://github.com/username/repo',
-  year: '2024',
-  team: 'Solo',
+  tags: ['HTML', 'CSS', 'TypeScript', 'React'],
+  size: 'medium', // 'large' | 'medium' | 'small'
+  images: ['/projects/mon-projet/1.png'],
+  demoUrl: 'https://exemple.com',
+  githubUrl: 'https://github.com/Erlow38/mon-projet',
+  year: '2025',
+  teamKey: 'solo', // clé traduite dans messages/*.json
 }
 ```
 
-**Images/Vidéos** : Placez-les dans `public/projects/nom-du-projet/`
+Ajouter la clé correspondante dans `projectKeys`, le titre dans `projectTitles`, puis les textes dans les deux fichiers de traduction.
 
-### 3. Modifier Votre Parcours
+## Déploiement
 
-**Fichier** : `components/ExperienceTimeline.tsx` (lignes 12-49)
+Le domaine est défini dans `CNAME` et `public/CNAME` (`www.ethan-ehrler.fr`).
 
-```typescript
-{
-  year: '2024',
-  title: 'Votre Poste',
-  company: 'Entreprise',
-  description: 'Description de vos missions',
-  icon: '🚀', // Emoji au choix
-  color: 'from-purple-500 to-pink-500',
-  type: 'work', // 'work', 'education', ou 'award'
-}
-```
-
-### 4. Informations de Contact
-
-**Email** : Déjà configuré avec `ethan.ehrler@outlook.com`
-- `components/Contact.tsx` ligne 20
-- `components/Contact.tsx` ligne 36
-- `components/Hero.tsx` ligne 156
-
-**Réseaux Sociaux** :
-- GitHub : `https://github.com/Erlow38`
-- LinkedIn : `https://www.linkedin.com/in/ethan-ehrler-b5855a251/`
-
-**Contact Info** (`components/Contact.tsx` lignes 31-53)
-- Téléphone, localisation
-
-### 5. Compétences
-
-**À Propos** (`components/About.tsx` lignes 13-41)
-**Technologies** (`components/InteractiveSkills.tsx` lignes 11-24)
-
-## 📝 Scripts Disponibles
+1. Dans les réglages GitHub du dépôt : Pages, source **Deploy from a branch**, branche `gh-pages`, dossier racine.
+2. DNS : un enregistrement `CNAME` de `www` vers `erlow38.github.io`.
+3. Publier :
 
 ```bash
-npm run dev      # Serveur de développement (port 3000)
-npm run build    # Build de production
-npm start        # Serveur de production
-npm run lint     # Vérifier le code
-```
-
-## 🌐 Déploiement sur GitHub Pages
-
-Ce portfolio est configuré pour être déployé sur GitHub Pages avec un domaine personnalisé.
-
-### Configuration Initiale (Une seule fois)
-
-1. **Créer le repository GitHub** :
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit - Portfolio"
-   git remote add origin https://github.com/Erlow38/next-portfolio.git
-   git branch -M main
-   git push -u origin main
-   ```
-
-2. **Sur GitHub**, allez dans Settings de votre repo :
-   - Pages → Source → **Deploy from a branch**
-   - Branch → **gh-pages** / **(root)**
-   - Custom domain → **www.ethan-ehrler.fr** (Save)
-
-3. **DNS de votre domaine** (chez votre registrar) :
-   ```
-   Type: CNAME
-   Name: www
-   Value: erlow38.github.io
-   TTL: 3600
-   ```
-
-### Déployer le Site
-
-```bash
-# Build et déployer en une commande
 npm run deploy
 ```
 
-Cette commande va :
-1. Builder le site en mode production
-2. Copier le fichier CNAME dans le dossier de sortie
-3. Créer le fichier .nojekyll
-4. Push le contenu du dossier `out/` vers la branche `gh-pages`
+La commande construit le site, copie `CNAME` et `.nojekyll` dans `out/`, puis pousse ce dossier sur `gh-pages`.
 
-### Voir le Site
+## Contact
 
-Une fois déployé (2-3 minutes), votre portfolio sera accessible sur :
-- 🌐 **Production** : https://www.ethan-ehrler.fr
-- 📦 **GitHub Pages** : https://erlow38.github.io/next-portfolio
-
-### Mise à jour du Site
-
-Après avoir modifié votre code :
-```bash
-git add .
-git commit -m "Update portfolio"
-git push
-npm run deploy
-```
-
-## 🎯 Optimisations Incluses
-
-- ✅ **Pas de lag** - Animations CSS au lieu de Framer Motion pour les hovers
-- ✅ **Images optimisées** - Format WebP recommandé
-- ✅ **Lazy loading** - Chargement à la demande
-- ✅ **Performance** - Score Lighthouse > 90
-- ✅ **SEO** - Meta tags configurés
-- ✅ **Accessibilité** - Navigation au clavier
-
-## 🐛 Troubleshooting
-
-### Erreur "Invalid Version" lors de npm install
-```bash
-npm cache clean --force
-npm install --legacy-peer-deps
-```
-
-### La vidéo ne se lance pas
-- Vérifiez que le fichier est en `.mp4`
-- Le navigateur doit supporter HTML5 video
-
-### Images non affichées
-- Vérifiez que les images sont dans `public/`
-- Les URLs doivent commencer par `/` (ex: `/images/logo.png`)
-
-## 📄 License
-
-Libre d'utilisation pour projets personnels et commerciaux.
-
-## 👨‍💻 Auteur
-
-**Ethan Ehrler**
-- Portfolio : [Votre URL]
-- GitHub : [@Erlow38](https://github.com/Erlow38)
-- LinkedIn : [Ethan Ehrler](https://www.linkedin.com/in/ethan-ehrler-b5855a251/)
-- Email : ethan.ehrler@outlook.com
-
----
-
-Créé par **Ethan Ehrler**
-
-🌐 **Site** : [www.ethan-ehrler.fr](https://www.ethan-ehrler.fr)
+Ethan Ehrler  
+[www.ethan-ehrler.fr](https://www.ethan-ehrler.fr)  
+[GitHub](https://github.com/Erlow38)  
+[LinkedIn](https://www.linkedin.com/in/ethan-ehrler-b5855a251/)  
+ethan.ehrler@outlook.com
